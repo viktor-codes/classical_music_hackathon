@@ -18,6 +18,13 @@
 				<a href="#lessons" class="hover:opacity-90">Lessons</a>
 				<a href="#challenges" class="hover:opacity-90">Challenges</a>
 				<a href="#our_team" class="hover:opacity-90">Our Team</a>
+				<a href="{% url 'register' %}" class="hover:opacity-90">Register</a>
+				
+				{% if user.is_authenticated %}
+				<a href="{% url 'logout' %}" class="hover:opacity-90">Logout</a>
+				{% else %}
+				<a href="{% url 'login' %}" class="hover:opacity-90">Login</a>
+				{% endif %}
 			</nav>
 		</div>
 	</section>
