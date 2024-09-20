@@ -33,7 +33,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "music-hackathon.herokuapp.com",
+    "https://music-hackathon-2953fb032739.herokuapp.com/",
 ]
 
 AUTH_USER_MODEL = "users.CustomUser"
