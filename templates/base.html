@@ -55,7 +55,9 @@
 		{% include 'header.html' %}
 
 		<!-- Content -->
-		<main>{% block content %} {% endblock content %}</main>
+		<main>
+			{% block content %} {% include 'hero.html' %}{% endblock content %}
+		</main>
 		<!-- Footer -->
 		{% include 'footer.html' %} {% block extra_js %} {% endblock %}
 		<script src="{% static 'js/main.js' %}"></script>
