@@ -33,7 +33,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "https://music-hackathon-2953fb032739.herokuapp.com/",
+    "https://music-hackathon-2953fb032739.herokuapp.com/", "localhost",
 ]
 
 AUTH_USER_MODEL = "users.CustomUser"
@@ -50,14 +50,20 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    'django.contrib.sites',
     "users",
     "tailwind",
     "theme",
     "django_browser_reload",
     "crispy_forms",  # new
     "crispy_tailwind",
+    #allauth
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
 ]
 
+SITE_ID = 1
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "tailwind"
 
@@ -80,6 +86,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django_browser_reload.middleware.BrowserReloadMiddleware",
+    "allauth.account.middleware.AccountMiddleware",
 ]
 
 ROOT_URLCONF = "music_hackathon.urls"
@@ -101,6 +108,26 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "music_hackathon.wsgi.application"
+
+AUTHENTICATION_BACKENDS = (
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/' 
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_EMAIL_REQUIRED = True               # Depends on your use case
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_USER_MODEL_USERNAME_FIELD = None
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://localhost:8000',
+    'http://localhost:8000',   
+]
 
 
 # Database
