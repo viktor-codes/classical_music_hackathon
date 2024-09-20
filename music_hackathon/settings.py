@@ -115,12 +115,12 @@ WSGI_APPLICATION = "music_hackathon.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "d5i1girqj4s7eu",
-        "USER": "ue6ctb41i00n4o",
-        "PASSWORD": "pafca60fd278d785bbd6c996583b7db4ae63da6153f58d605b2ac1898d61ac361",
-        "HOST": "c3l5o0rb2a6o4l.cluster-czz5s0kz4scl.eu-west-1.rds.amazonaws.com",
-        "PORT": "5432",
+        "ENGINE": os.getenv("DB_ENGINE"),
+        "NAME": os.getenv("DB_NAME"),
+        "USER": os.getenv("DB_USER"),
+        "PASSWORD": os.getenv("DB_PASSWORD"),
+        "HOST": os.getenv("DB_HOST"),
+        "PORT": os.getenv("DB_PORT"),
     },
 }
 

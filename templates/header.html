@@ -18,11 +18,14 @@
 				<a href="#lessons" class="hover:opacity-90">Lessons</a>
 				<a href="#challenges" class="hover:opacity-90">Challenges</a>
 				<a href="#our_team" class="hover:opacity-90">Our Team</a>
-				<a href="{% url 'register' %}" class="hover:opacity-90">Register</a>
 				
 				{% if user.is_authenticated %}
-				<a href="{% url 'logout' %}" class="hover:opacity-90">Logout</a>
+				<a href="#" onclick="document.getElementById('logout-form').submit();" class="hover:opacity-90">Log Out</a>
+				<form id="logout-form" action="{% url 'logout' %}" method="post" style="display: none;">
+					{% csrf_token %}
+			</form>
 				{% else %}
+				<a href="{% url 'register' %}" class="hover:opacity-90">Register</a>
 				<a href="{% url 'login' %}" class="hover:opacity-90">Login</a>
 				{% endif %}
 			</nav>
@@ -49,6 +52,15 @@
 			<a href="#our_team" class="w-full text-center py-6 hover:opacity-90"
 				>Our Team</a
 			>
+			{% if user.is_authenticated %}
+				<a href="#" onclick="document.getElementById('logout-form').submit();" class="w-full text-center py-6 hover:opacity-90">Log Out</a>
+				<form id="logout-form" action="{% url 'logout' %}" method="post" style="display: none;">
+					{% csrf_token %}
+			</form>
+				{% else %}
+				<a href="{% url 'register' %}" class="w-full text-center py-6 hover:opacity-90">Register</a>
+				<a href="{% url 'login' %}" class="w-full text-center py-6 hover:opacity-90">Login</a>
+				{% endif %}
 		</nav>
 	</section>
 </header>
