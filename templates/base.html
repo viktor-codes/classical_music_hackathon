@@ -1,0 +1,65 @@
+{% load static %} {% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Block for navigation names -->
+		<title>{% block title %}Rhythm Ready{% endblock %}</title>
+
+		<!-- Block Meta -->
+		{% block meta %}
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+
+		<meta
+			name="title"
+			content="Learn Music Theory | Interactive Lessons and Challenges"
+		/>
+
+		<meta
+			name="description"
+			content="Master music theory and improve your skills with interactive lessons, challenges, and tutorials. Perfect for beginners and advanced musicians, our app covers everything from scales and chords to ear training and sight-reading. Start learning music today!"
+		/>
+
+		<meta
+			name="keywords"
+			content="music learning, music theory, music lessons, music education, learn music online, music theory for beginners, music exercises, music theory challenges, music theory app, music practice, music skills, classical music theory, music scales, music intervals, music composition, music notation, sight-reading, ear training, music tutorials, online music courses, music theory quiz, harmony, melody, rhythm, music fundamentals, music theory games, chord progressions, music theory exercises, music theory lessons"
+		/>
+
+		<meta name="author" content="team_3" />
+		{% endblock %}
+
+		<!-- Block for core CSS styles -->
+		{% block core_css %}
+
+		<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+		{% endblock %}
+
+		<!-- Block for extra CSS styles -->
+		{% block extra_css %}{% endblock %}
+
+		<!-- Block for core JS scripts -->
+		{% block core_js %} {% endblock %}
+
+		<!-- FavIcon -->
+		<link rel="icon" type="image/x-icon" href="{% static 'images/fav.png' %}" />
+		{% tailwind_css %}
+	</head>
+	{% block body %}
+
+	<body>
+		<!-- Header -->
+		{% include 'header.html' %}
+
+		<!-- Content -->
+		<main>{% block content %} {% endblock content %}</main>
+		<!-- Footer -->
+		{% include 'footer.html' %} {% block extra_js %} {% endblock %}
+		<script src="{% static 'js/main.js' %}"></script>
+		<script></script>
+	</body>
+	{% endblock %}
+</html>
