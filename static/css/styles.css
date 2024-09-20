@@ -1223,6 +1223,17 @@ video {
 	background-color: rgb(20 184 166 / var(--tw-bg-opacity));
 }
 
+/* Auth */
+.center-form {
+	text-align: center;
+    margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.auth-header {
+	font-size: 200%;
+}
+
 @media (min-width: 640px) {
 	.sm\:block {
 		display: block;
