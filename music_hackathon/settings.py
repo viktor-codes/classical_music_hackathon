@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 import os
+import django_heroku
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -31,7 +32,9 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "music-hackathon.herokuapp.com",
+]
 
 AUTH_USER_MODEL = "users.CustomUser"
 
@@ -103,10 +106,21 @@ WSGI_APPLICATION = "music_hackathon.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
+
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    default: {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "d5i1girqj4s7eu",
+        "USER": "ue6ctb41i00n4o",
+        "PASSWORD": "pafca60fd278d785bbd6c996583b7db4ae63da6153f58d605b2ac1898d61ac361",
+        "HOST": "c3l5o0rb2a6o4l.cluster-czz5s0kz4scl.eu-west-1.rds.amazonaws.com",
+        "PORT": "5432",
     }
 }
 
@@ -147,8 +161,10 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 STATICFILES_DIRS = (BASE_DIR / "static",)
+django_heroku.settings(locals())
 
-MEDIA = "/media/"
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
