@@ -1,4 +1,86 @@
-<header class="bg-teal-700 text-white sticky top-0 z-10">
+{% load static %}
+
+{% block core_css %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+{% endblock %}
+
+{% block header %}
+<header class="m-0 mt-4">
+	<nav class="navbar navbar-expand-lg bg-warning py-4">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="">
+				<a href="{% url 'home' %}" class="fs-2 text-dark"> 🎹 Rhythm Ready </a>
+			</a>
+			<button class="navbar-toggler navbar-light" type="button" data-bs-toggle="offcanvas"
+				data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+				aria-labelledby="offcanvasNavbarLabel">
+				<div class="offcanvas-header">
+					<h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+					<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+						aria-label="Close"></button>
+				</div>
+				<div class="offcanvas-body p-0">
+					<ul
+						class="navbar-nav justify-content-center align-self-center flex-grow-1 ms-0 p-3 pb-2 p-lg-0">
+						<li class="nav-item mb-2 mb-lg-0">
+							<a class="nav-link link fs-5 fw-bold text-dark" href="">Lessons</a>
+						</li>
+						<li class="nav-item mb-2 mb-lg-0">
+							<a class="nav-link link fs-5 fw-bold text-dark" href="">Challenges</a>
+						</li>
+						<li class="nav-item mb-2 mb-lg-0">
+							<a class="nav-link link fs-5 fw-bold text-dark" href="">Team</a>
+						</li>
+					</ul>
+
+					<ul class="navbar-nav justify-content-end align-self-center">
+						{% if user.is_authenticated %}
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle d-none d-lg-block pe-3 ps-lg-0 me-5 text-black"
+								href="#" id="offcanvasNavbarDropdownFirst" role="button" data-bs-toggle="dropdown"
+								aria-expanded="false">
+								<img src="https://imgur.com/kUyQ94l.png" class="profile-img"
+									alt="No image availible Placeholder">
+							</a>
+							<a class="nav-link link dropdown-toggle d-block d-lg-none ps-3 pe-lg-0 me-4" href="#"
+								id="offcanvasNavbarDropdownSecond" role="button" data-bs-toggle="dropdown"
+								aria-expanded="false">
+								Profile
+							</a>
+							<ul class="dropdown-menu drop-menu border-0" aria-labelledby="offcanvasNavbarDropdownSecond">
+								<li>
+									<a class="dropdown-item link fs-5 p-0 mb-2 ms-3"
+										href="">Profile</a>
+								</li>
+								<li><a class="dropdown-item link logout-nav fs-5 p-0 mt-5 mb-2 ms-3 text-dark"
+										href="{% url 'logout' %}">Logout</a></li>
+							</ul>
+						</li>
+						{% else %}
+						<li class="nav-item">
+							<a class="nav-link link fs-5 mt-5 mt-lg-0 ms-3 fw-bold  text-dark" href="{% url 'login' %}">Login</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link link badge bg-dark fs-5 ms-3" href="{% url 'register' %}">Sign Up</a>
+						</li>
+						{% endif %}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+</header>
+{% endblock %}
+
+
+
+
+
+<!-- <header class="bg-teal-700 text-white sticky top-0 z-10">
 	<section class="max-w-4xl mx-auto p-4 flex justify-between items-center">
 		<h1 class="text-3xl font-medium">
 			<a href="#hero"> 🎹 Rhythm Ready </a>
@@ -7,9 +89,9 @@
 			<button
 				id="hamburger-button"
 				class="text-3xl md:hidden cursor-pointer relative w-8 h-8"
-			>
+			> -->
 				<!-- &#9776; -->
-				<div
+				<!-- <div
 					class="bg-white w-8 h-1 rounded absolute top-4 -mt-0.5 transition-all duration-500 before:content-[''] before:bg-white before:w-8 before:h-1 before:rounded before:absolute before:-translate-x-4 before:-translate-y-3 before:transition-all before:duration-500 after:content-[''] after:bg-white after:w-8 after:h-1 after:rounded after:absolute after:-translate-x-4 after:translate-y-3 after:transition-all after:duration-500"
 				></div>
 			</button>
@@ -30,11 +112,11 @@
 	<section
 		id="mobile-menu"
 		class="absolute top-68 bg-black w-full text-5xl flex-col justify-content-center origin-top animate-open-menu hidden"
-	>
+	> -->
 		<!-- <button class="text-8xl self-end px-6">
 						&times;
 				</button> -->
-		<nav
+		<!-- <nav
 			class="flex flex-col min-h-screen items-center py-8"
 			aria-label="mobile"
 		>
@@ -50,4 +132,4 @@
 			>
 		</nav>
 	</section>
-</header>
+</header> -->
