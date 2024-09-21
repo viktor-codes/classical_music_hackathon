@@ -36,7 +36,6 @@
 
 		<!-- Block for core CSS styles -->
 		{% block core_css %}
-
 		<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
 		{% endblock %}
 
@@ -62,20 +61,18 @@
 		<link rel="icon" type="image/png" href="{% static 'images/fav.png' %}" />
 		{% tailwind_css %}
 	</head>
-	{% block body %}
 
-	<body class="min-h-screen bg-slate-50">
+	<body>
 		<!-- Header -->
-		{% include 'header.html' %}
+		{% include 'header.html' %}{% block header %} {% endblock %}
 
 		<!-- Content -->
-		<main class="">
-			{% block content %} {% include 'index.html' %} {% include 'piano.html' %}{% endblock content %}
+		<main>
+			{% block content %} {% endblock content %}
 		</main>
 		<!-- Footer -->
 		{% include 'footer.html' %} {% block extra_js %} {% endblock %}
 		<script src="{% static 'js/main.js' %}"></script>
 		<script src="{% static 'js/piano.js' %}"></script>
 	</body>
-	{% endblock %}
 </html>

@@ -6,7 +6,7 @@ from django.views.generic.edit import CreateView
 
 
 def home(request):
-    return render(request, "base.html")
+    return render(request, "index.html")
 
 
 class SignUpView(SuccessMessageMixin, CreateView):
