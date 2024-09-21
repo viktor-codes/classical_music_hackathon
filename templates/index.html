@@ -1,0 +1,27 @@
+{% load static %}
+{% block content %}
+<section
+	id="hero"
+	class="flex flex-col-reverse justify-center sm:flex-row p-6 items-center gap-8 mb-12 scroll-mt-40 widescreen:section-min-height tallscreen:section-min-height"
+>
+	<article class="sm:w-1/2">
+		<h2
+			class="max-w-md text-4xl font-bold textcenter sm:text-5xl sm:tet-left text-slate-900"
+		>
+			Unlock Your Musical Potential with
+			<span class="text-indigo-700">Rhythm Ready</span>
+			!
+		</h2>
+		<p class="max-w-md text-2xl mt-4 text-center sm:text-left text-slate-700">
+			Welcome to Rhythm Ready, your ultimate music learning companion! Whether
+			you’re a beginner looking to grasp the basics or an experienced musician
+			aiming to refine your skills, our interactive lessons and challenges make
+			learning music theory engaging and fun.
+		</p>
+		<p class="max-w-md text-2xl mt-4 text-center sm:text-left text-slate-700">
+			Think Acme Rockets.
+		</p>
+	</article>
+	<img class="w-1/2" src="{% static 'images/hero.png' %}" alt="piano" />
+</section>
+{% endblock content %}

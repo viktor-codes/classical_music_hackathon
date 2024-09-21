@@ -30,7 +30,9 @@
 		/>
 
 		<meta name="author" content="team_3" />
+		
 		{% endblock %}
+		
 
 		<!-- Block for core CSS styles -->
 		{% block core_css %}
@@ -39,7 +41,19 @@
 		{% endblock %}
 
 		<!-- Block for extra CSS styles -->
-		{% block extra_css %}{% endblock %}
+		{% block extra_css %}
+		<link rel="stylesheet" href="{% static 'css/piano.css' %}" />
+
+		<!-- Global Bootstrap link -->
+		<link
+		href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+		rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+		crossorigin="anonymous"
+	  />
+  
+	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+		{% endblock %}
 
 		<!-- Block for core JS scripts -->
 		{% block core_js %} {% endblock %}
@@ -55,13 +69,13 @@
 		{% include 'header.html' %}
 
 		<!-- Content -->
-		<main class="max-w-4xl mx-auto">
-			{% block content %} {% include 'hero.html' %}{% endblock content %}
+		<main class="">
+			{% block content %} {% include 'index.html' %} {% include 'piano.html' %}{% endblock content %}
 		</main>
 		<!-- Footer -->
 		{% include 'footer.html' %} {% block extra_js %} {% endblock %}
 		<script src="{% static 'js/main.js' %}"></script>
-		<script></script>
+		<script src="{% static 'js/piano.js' %}"></script>
 	</body>
 	{% endblock %}
 </html>
