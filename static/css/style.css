@@ -51,6 +51,19 @@ h1, .lead{
     color: var(--background);
 }
 
+.primary-fill-btn {
+    background-color: var(--primary);
+    border: 3px solid var(--background);
+    color: #000;
+    transition: 0.3s ease-in-out;
+}
+
+.primary-fill-btn:hover {
+    background-color: var(--background);
+    border: 3px solid var(--primary);
+    color: var(--primary);
+}
+
 .footer-img {
     font-size: 3rem;
 }
