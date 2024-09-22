@@ -1,0 +1,26 @@
+<!-- Logout Confirmation Modal -->
+<div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="logoutModalLabel">Confirm Logout</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <!-- Modal Body -->
+      <div class="modal-body">
+        Are you sure you want to log out?
+      </div>
+      <!-- Modal Footer -->
+      <div class="modal-footer">
+        <!-- Close/Cancel Button -->
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <!-- Confirm Logout Button -->
+        <a href="#" onclick="document.getElementById('logout-form').submit();" class="btn btn-danger">Log Out</a>
+				<form id="logout-form" action="{% url 'logout' %}" method="post" style="display: none;">
+					{% csrf_token %}
+			</form>
+      </div>
+    </div>
+  </div>
+</div>
