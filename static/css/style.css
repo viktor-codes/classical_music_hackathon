@@ -114,6 +114,10 @@ h1, .lead{
     box-shadow: none;
 }
 
+.hide {
+    display: none;
+}
+  
 .login {
     margin-bottom: 128px;
 }
