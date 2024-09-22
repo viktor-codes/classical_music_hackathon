@@ -5,10 +5,9 @@
 
 {%block content %}
 
-
-<div class="form-signin d-flex justify-content-center align-self-center my-5">
-	<div class="col-3 my-5">
-		<form class="col-12 lead" action="#" method="POST">
+<div class="form-signin login d-flex justify-content-center align-self-center mt-4">
+	<div class="col-11 col-md-6 col-lg-3 my-5">
+		<form class="col-12 lead mb-5" action="#" method="POST">
 			<h1 class="h3 mb-3 fw-normal text-center">Login</h1>
 				{% csrf_token %}
 				{{ form|crispy }}
@@ -16,7 +15,7 @@
 					Don't have an account?
 					<a href="{% url 'register' %}" class="name" >Sign Up</a >
 				</p>
-			<div class="w-100 d-grid gap-2 mb-5">
+			<div class="w-100 d-grid gap-2 my-5">
 				<button type="submit" class="btn primary-fill-btn fw-bold" > Sign in </button>
 			</div>
 		</form>
