@@ -23,7 +23,7 @@ function playNoteFromKey(e) {
 
   const keyNote = key.getAttribute("data-note");
   key.classList.add("playing");
-  note.innerHTML = keyNote;
+//   note.innerHTML = keyNote;
   audio.currentTime = 0;
   audio.play();
 
