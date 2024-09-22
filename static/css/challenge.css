@@ -1,0 +1,45 @@
+.button-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 500px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.keyboard-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ms-5 {
+    margin: 0!important;
+    padding: 0;
+    color: #fff;
+}
+.btn {
+    font-size: 18px!important;
+}
+
+.score {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    min-height: 120px;
+    font-size: 20px;
+    line-height: 1;
+    color: #FFF;
+    perspective: 100px;
+    transition: all .07s ease;
+  }
+
+.data-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}

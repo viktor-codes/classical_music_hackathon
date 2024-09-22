@@ -1,18 +1,80 @@
-#meet-the-team {
-    text-align: center;
-    background-color: #A5D6A7; /* Light green background */
-    padding: 20px;
-  }
+.opera {
+	overflow-x: hidden;
+}
 
-  .team-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
+.image-container {
+	position: relative;
+}
 
-  /* Our Project Section */
-  #our-project {
-    padding: 30px;
-    background-color: #FFFFFF;
-    text-align: center;
-  }
+img {
+	max-width: 100%;
+	height: auto;
+	object-fit: contain;
+}
+
+.circle {
+	position: absolute;
+	width: 50px; /* Diameter of the circle */
+	height: 50px; /* Diameter of the circle */
+	border-radius: 50%; /* Make it a circle */
+	background: rgba(255, 0, 0, 0.3); /* Semi-transparent red */
+	animation: pulse 1s infinite; /* Animation */
+	pointer-events: auto; /* Allow clicks on the circle links */
+	display: flex; /* Center the cross inside */
+	align-items: center; /* Center vertically */
+	justify-content: center; /* Center horizontally */
+	text-decoration: none; /* Remove underline from links */
+	cursor: pointer; /* Change cursor on hover */
+}
+
+/* Cross Styles */
+.cross {
+	width: 12px; /* Width of the cross */
+	height: 12px; /* Height of the cross */
+	background: transparent;
+	border-left: 2px solid red;
+	border-top: 2px solid red;
+	transform: rotate(45deg); /* Rotate to form a cross */
+}
+
+/* Keyframes for pulse animation */
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	50% {
+		transform: scale(1.2);
+		opacity: 0.7;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+/* Position each circle using percentages */
+.circle-1 {
+	top: 53%; /* Adjust as needed */
+	left: 10%; /* Adjust as needed */
+}
+.circle-2 {
+	top: 54%; /* Adjust as needed */
+	left: 24%; /* Adjust as needed */
+}
+.circle-3 {
+	top: 53%; /* Adjust as needed */
+	left: 38%; /* Adjust as needed */
+}
+.circle-4 {
+	top: 43%; /* Adjust as needed */
+	left: 48%; /* Adjust as needed */
+}
+.circle-5 {
+	top: 55%; /* Adjust as needed */
+	left: 65%; /* Adjust as needed */
+}
+.circle-6 {
+	top: 55%; /* Adjust as needed */
+	left: 81%; /* Adjust as needed */
+}
