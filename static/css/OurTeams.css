@@ -1,0 +1,18 @@
+#meet-the-team {
+    text-align: center;
+    background-color: #a5d6a7; /* Light green background */
+    padding: 20px;
+  }
+  
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  /* Our Project Section */
+  #our-project {
+    padding: 30px;
+    background-color: #ffffff;
+    text-align: center;
+  }
