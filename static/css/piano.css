@@ -207,3 +207,6 @@ body {
   .incorrect {
     background: red!important;
   }
+  .correct-blue {
+    background: blue!important;
+  }

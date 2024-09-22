@@ -14,7 +14,7 @@ const scoreElement = document.getElementById('score');
 let score = 0;
 let currentNote = '';
 let isStarted = false; // game state
-
+let isGamePaused = true;
 
 // Event listeners
 document.addEventListener('DOMContentLoaded', function() {
@@ -41,6 +41,7 @@ function startChallenge() {
     score = 0;
     setNextNote();
     isStarted = true;
+    isGamePaused = false;
 }
 
 // Function to generate random note
@@ -49,6 +50,7 @@ function getRandomNote() {
 }
 
 function setNextNote() {
+    isGamePaused = false;
     resetState();
     currentNote = getRandomNote();
     showNote(currentNote);
@@ -60,18 +62,19 @@ function showNote(question) {
 }
 
 function resetState() {
-    // nextButton.classList.add('hide');
     randomNoteElement.innerText = '';
 }
 
 // Highlight the pressed key
 function highlightKey(key, className) {
     key.classList.add(className);
-    // key.classList.remove(className);
 }
 
 // Handle key press
 function selectAnswer(e) {
+    if (isGamePaused) {
+        return;
+    }
     let keyCode;
 
     if (e.type === 'keydown') {
@@ -81,10 +84,7 @@ function selectAnswer(e) {
     }
 
     const selectedKey = document.querySelector(`.key[data-key="${keyCode}"]`);
-    
-
     if (!selectedKey) return;
-
     const userAnswer = selectedKey.getAttribute('data-note');
     const correctKey = document.querySelector(`.key[data-note="${currentNote}"]`);
 
@@ -94,14 +94,17 @@ function selectAnswer(e) {
         updateScore();
     } else {
         highlightKey(selectedKey, 'incorrect');
-        highlightKey(correctKey, 'correct');
+        highlightKey(correctKey, 'correct-blue');
         score--;
         updateScore();
     }
-    // document.getElementById('score').innerText = 'Score: ' + score + '/' + maxRounds;
+    isGamePaused = true;
 }
 
 function handleNextButton() {
+    if (!isGamePaused) {
+        return;
+    }
     clearKeyboard();
     // Increment round when next button is clicked
     currentRound++;
@@ -129,6 +132,11 @@ function clearKeyboard() {
     for(incorrectTag of incorrectTags) {
         incorrectTag.classList.toggle('incorrect');
     }
+    var incorrectTags = document.querySelectorAll(".correct-blue");
+    for(incorrectTag of incorrectTags) {
+        incorrectTag.classList.toggle('correct-blue');
+    }
+    
     
 }
 
@@ -138,6 +146,7 @@ function restartChallenge() {
     // Re-initialise round and score to 0 at the start of quiz
     currentRound = 0;
     score = 0;
+    updateScore();
     setNextNote();
 }
 
