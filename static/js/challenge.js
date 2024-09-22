@@ -23,7 +23,6 @@ let isStarted = false; // game state
 
 // Event listeners
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('doc loaded')
     startButton.addEventListener('click', startChallenge);
 
     nextButton.addEventListener('click', () => {
@@ -32,11 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    playAgainButton.addEventListener('click', restartChallenge);
+    // playAgainButton.addEventListener('click', restartChallenge);
 
     quitButton.addEventListener('click', quitChallenge);
 
-    homeButton.addEventListener('click', goHome);
+    // homeButton.addEventListener('click', goHome);
 
     
 });
@@ -55,7 +54,6 @@ function getRandomNote() {
 
 // Function to start new round
 function startChallenge() {
-    console.log('challenege has started');
     isStarted = true;
     // currentNote = getRandomNote();
     // document.getElementById('#').innerText = 'Press the correct key for the note: ' + currentNote;
@@ -75,10 +73,10 @@ function setNextNote() {
     console.log('Score: ' + score);
     resetState();
     currentNote = getRandomNote();
-    console.log(currentNote);
     showNote(currentNote);
     currentRound++;
-    challengeProgress.innerText = `Round ${currentRound} of ${maxRounds}`;
+    // console.log(`Round ${currentRound} of ${maxRounds}`);
+    // challengeProgress.innerText = `Round ${currentRound} of ${maxRounds}`;
 }
 
 function showNote(question) {
@@ -92,55 +90,38 @@ function resetState() {
 
 // Highlight the pressed key
 function highlightKey(key, className) {
-    console.log(key);
-    console.log('Class name: ' + className);
-    console.log('we are highlighting the key');
     key.classList.add(className);
-    setTimeout(() => {
-        key.classList.remove(className);
-    }, 500);
+    // key.classList.remove(className);
 }
 
 // Handle key press
 function selectAnswer(e) {
-    console.log('clicked');
     let keyCode;
 
     if (e.type === 'keydown') {
-        console.log('you pressed a key');
         keyCode = e.keyCode;
     } else if (e.type === 'click') {
-        console.log('You clicked. key')
         keyCode = e.currentTarget.getAttribute("data-key");
     }
 
-    console.log(keyCode);
-
     const selectedKey = document.querySelector(`.key[data-key="${keyCode}"]`);
     
-    console.log(selectedKey)
 
     if (!selectedKey) return;
 
     const userAnswer = selectedKey.getAttribute('data-note');
-    console.log('User Answer: ' + userAnswer);
     const correctKey = document.querySelector(`.key[data-note="${currentNote}"]`);
-    console.log(correctKey);
-
-
 
     if (userAnswer === currentNote) {
         console.log('correct');
         highlightKey(selectedKey, 'correct');
-        console.log('above line passes');
         score++;
         console.log('Score: ' + score)
     } else {
         console.log('incorrect')
-        highlightKey(userAnswer, 'incorrect');
+        highlightKey(selectedKey, 'incorrect');
         highlightKey(correctKey, 'correct');
     }
-    console.log('Do we get to here');
     setNextNote();
     // document.getElementById('score').innerText = 'Score: ' + score + '/' + maxRounds;
     // startNewRound();

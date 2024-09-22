@@ -9,10 +9,6 @@
     <div class="row d-flex justify-content-center w-100">
         <div>
             <div class="d-flex justify-content-center mt-5">
-                <div class="music-wrapper">
-                    <img src="{% static 'images/sheet.png' %}" alt="">
-                    <div class="overlay-images"></div>
-                </div>
                 <div id="random-note" class="nowplaying ms-5"></div>
             </div>
             <div class="keyboard mt-5 ">
@@ -68,7 +64,7 @@
                             <div data-key="79" class="key sharp" data-note="C#">
                                 <span class="hints">O</span>
                             </div>
-                            <div data-key="76" class="key" data-note="D">
+                            <div data-key="76" class="key correct" data-note="D">
                                 <span class="hints">L</span>
                             </div>
                             <div data-key="80" class="key sharp" data-note="D#">
@@ -109,7 +105,5 @@
     <audio data-key="80" src="http://carolinegabriel.com/demo/js-keyboard/sounds/055.wav"></audio>
     <audio data-key="186" src="http://carolinegabriel.com/demo/js-keyboard/sounds/056.wav"></audio>
 </section>
-
-<script defer typ src="{% static 'js/script.js' %}"></script>
 
 {% endblock content %}
