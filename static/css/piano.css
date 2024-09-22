@@ -199,3 +199,11 @@ body {
   .toggle-wrapper.on .text {
     transform: translateX(-30px);
   }
+
+.correct {
+  background-color: green;
+}
+
+.incorrect {
+  background-color: red;
+}
