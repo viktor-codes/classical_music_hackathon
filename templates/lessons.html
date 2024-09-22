@@ -1,171 +1,124 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block content %}
+{% extends 'base.html' %} {% load static %} {% block content %}
 <div class="lesson-section">
-    <section class="container-fluid main-content">
+  <section class="container-fluid main-content container m-0">
+    <div class="row">
+      <div class="col-3">
         <div class="sidebar">
-            <div class="sidebar-controller">
-                <i class="fa-solid fa-bars" id="hamburger-menu"></i>
-            </div>
-            <ul>
-                <li>
-                    <a href="#">
-                        <i class="fa-solid fa-school"></i>
-                        <span class="lesson-item">Learn</span>
-                    </a>
-                    <span class="tooltip">Learn</span>
-                </li>
-    
-                <li>
-                    <a href="#">
-                        <i class="fa-solid fa-pen-to-square"></i>
-                        <span class="lesson-item">Practice</span>
-                    </a>
-                    <span class="tooltip">Practice</span>
-                </li>
-    
-                <li>
-                    <a href="#">
-                        <i class="fa-solid fa-trophy"></i>
-                        <span class="lesson-item">Challenge</span>
-                    </a>
-                    <span class="tooltip">Challenge</span>
-                </li>
-    
-                <li>
-                    <a href="#">
-                        <i class="fa-solid fa-music"></i>
-                        <span class="lesson-item">Play</span>
-                    </a>
-                    <span class="tooltip">Play</span>
-                </li>        
-            </ul>
-        </div>
-        <h1 style='color: #fff;'>The Musical Alphabet</h1>
-        <p style='color: #fff;'>
-            There are 8 white notes. We name notes from A to G and then repeat from A again.
-            The black keys have names too. They are named as either sharp (#) or flat (b) of the note beside them. For example black note right of F is F# it is also Left of G so it can be called Gb too. This means that there is two possible names for all the the black notes
-        </p>
-        <ul style='color: #fff'>
-            <li>C</li>
-            <li>C♯ or D♭</li>
-            <li>D</li>
-            <li>D# or Eb</li>
-            <li>E</li>
-            <li>F</li>
-            <li>F# or Gb</li>
-            <li>G</li>
-            <li>G# or Ab</li>
-            <li>A</li>
-            <li>A# or Bb</li>
-            <li>B</li>
-        </ul>
-        <p style='color: #fff;'>
-            These 12 notes just repeat over and over again on the keyboard.
-            If you’re new to the piano, here is a quick way to remember where notes are:
-        </p>
-        <ul style="color: #fff">
-            <li>C is on the left of the group of the two black keys</li>
-            <li>D is in the middle of the group of the two black keys</li>
-            <li>E is on the right of the group of the two black keys</li>
-            <li>F is on the left of the group of the three black keys</li>
-            <li>G is in the middle left of the group of the three black keys</li> 
-            <li>A is in the middle right of the group of the three black keys</li> 
-            <li>B is on the right of the group of the three black keys</li>
-        </ul>
+          <div class="sidebar-controller">
+            <i class="fa-solid fa-bars" id="hamburger-menu"></i>
+          </div>
+          <ul>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-school"></i>
+                <span class="lesson-item">Learn</span>
+              </a>
+              <span class="tooltip">Learn</span>
+            </li>
 
-        <p style='color: #fff;'>
-            Toggle the slider to show where the notes are
-        </p>
-        <div class="row d-flex justify-content-center w-100">
-            <div class="lessons-piano-wrapper">
-                <div class="d-flex justify-content-center mt-5">
-                    <div class="nowplaying"style="width: 100%"></div>
-                </div>
-                <div class="keyboard mt-5 ">
-                    <div>
-                        <div class="toggle-box d-flex justify-content-end me-4">
-                            <div class="toggle-wrapper hint-btn" id="hintButton">
-                                <div class="circle"></div>
-                                <span class="text">OFF</span>
-                            </div>
-                        </div>
-                        <div class="keys-wrapper">
-                            <div class="keys">
-                                <div data-key="65" class="key" data-note="c4">
-                                    <span class='hints'>C</span>
-                                </div>
-                                <div data-key="87" class="key sharp" data-note="C#">
-                                    <span class='hints'>C#</span>
-                                </div>
-                                <div data-key="83" class="key" data-note="D">
-                                    <span class='hints'>D</span>
-                                </div>
-                                <div data-key="69" class="key sharp" data-note="D#">
-                                    <span class='hints'>D#</span>
-                                </div>
-                                <div data-key="68" class="key" data-note="E">
-                                    <span class='hints'>E</span>
-                                </div>
-                                <div data-key="70" class="key" data-note="F">
-                                    <span class='hints'>F</span>
-                                </div>
-                                <div data-key="84" class="key sharp" data-note="F#">
-                                    <span class='hints'>F#</span>
-                                </div>
-                                <div data-key="71" class="key" data-note="G">
-                                    <span class='hints'>G</span>
-                                </div>
-                                <div data-key="89" class="key sharp" data-note="G#">
-                                    <span class='hints'>G#</span>
-                                </div>
-                                <div data-key="72" class="key" data-note="A">
-                                    <span class='hints'>A</span>
-                                </div>
-                                <div data-key="85" class="key sharp" data-note="Bb">
-                                    <span class='hints'>Bb</span>
-                                </div>
-                                <div data-key="74" class="key" data-note="B">
-                                    <span class='hints'>B</span>
-                                </div>
-                                <div data-key="75" class="key" data-note="C">
-                                    <span class='hints'>C</span>
-                                </div>
-                                <div data-key="79" class="key sharp" data-note="C#">
-                                    <span class='hints'>C#</span>
-                                </div>
-                                <div data-key="76" class="key" data-note="D">
-                                    <span class='hints'>D</span>
-                                </div>
-                                <div data-key="80" class="key sharp" data-note="D#">
-                                    <span class='hints'>D#</span>
-                                </div>
-                                <div data-key="186" class="key" data-note="E">
-                                    <span class='hints'>E</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-pen-to-square"></i>
+                <span class="lesson-item">Practice</span>
+              </a>
+              <span class="tooltip">Practice</span>
+            </li>
+
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-trophy"></i>
+                <span class="lesson-item">Challenge</span>
+              </a>
+              <span class="tooltip">Challenge</span>
+            </li>
+
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-music"></i>
+                <span class="lesson-item">Play</span>
+              </a>
+              <span class="tooltip">Play</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-8 mt-5">
+
+        <div class="lesson-selector mb-5">
+            <button class="lesson-tab active" data-lesson="1">Lesson 1</button>
+            <button class="lesson-tab" data-lesson="2">Lesson 2</button>
+            <button class="lesson-tab" data-lesson="3">Lesson 3</button>
+            <!-- Add more lessons as needed -->
+        </div>
+        
+        <div class="lesson-content" id="lesson-1">
+            <!-- Content for Lesson 1 -->
+            <h1>Lesson 1: The Musical Alphabet</h1>
+            <p class="mt-5">There are 8 white notes. We name notes from A to G and then repeat
+                from A again. The black keys have names too. They are named as either
+                sharp (#) or flat (b) of the note beside them. For example black note
+                right of F is F# it is also Left of G so it can be called Gb too. This
+                means that there is two possible names for all the the black notes</p>
+            <p class="mt-3">
+                These 12 notes just repeat over and over again on the keyboard. If
+                you’re new to the piano, here is a quick way to remember where notes
+                are:
+            </p>
+            <div class="d-flex justify-between mt-5">
+                <p class="me-5">
+                    <ul>
+                        <li>C</li>
+                        <li>C♯ or D♭</li>
+                        <li>D</li>
+                        <li>D# or Eb</li>
+                        <li>E</li>
+                        <li>F</li>
+                        <li>F# or Gb</li>
+                        <li>G</li>
+                        <li>G# or Ab</li>
+                        <li>A</li>
+                        <li>A# or Bb</li>
+                        <li>B</li>
+                      </ul>
+                </p>
+                <p class="ms-5">
+                    <ul>
+                        <li>C is on the left of the group of the two black keys</li>
+                        <li>D is in the middle of the group of the two black keys</li>
+                        <li>E is on the right of the group of the two black keys</li>
+                        <li>F is on the left of the group of the three black keys</li>
+                        <li>G is in the middle left of the group of the three black keys</li>
+                        <li>A is in the middle right of the group of the three black keys</li>
+                        <li>B is on the right of the group of the three black keys</li>
+                      </ul>
+                </p>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <div class="music-wrapper mt-5 d-flex justify-between">
+                    <img src="" alt="Note Image" style="max-width: 100%; display: none;" />
+                    <div class="nowplaying" style="width: 100%"></div>
                 </div>
             </div>
+            {% include 'piano.html' %}
         </div>
-        <audio data-key="65" src="http://carolinegabriel.com/demo/js-keyboard/sounds/040.wav"></audio>
-        <audio data-key="87" src="http://carolinegabriel.com/demo/js-keyboard/sounds/041.wav"></audio>
-        <audio data-key="83" src="http://carolinegabriel.com/demo/js-keyboard/sounds/042.wav"></audio>
-        <audio data-key="69" src="http://carolinegabriel.com/demo/js-keyboard/sounds/043.wav"></audio>
-        <audio data-key="68" src="http://carolinegabriel.com/demo/js-keyboard/sounds/044.wav"></audio>
-        <audio data-key="70" src="http://carolinegabriel.com/demo/js-keyboard/sounds/045.wav"></audio>
-        <audio data-key="84" src="http://carolinegabriel.com/demo/js-keyboard/sounds/046.wav"></audio>
-        <audio data-key="71" src="http://carolinegabriel.com/demo/js-keyboard/sounds/047.wav"></audio>
-        <audio data-key="89" src="http://carolinegabriel.com/demo/js-keyboard/sounds/048.wav"></audio>
-        <audio data-key="72" src="http://carolinegabriel.com/demo/js-keyboard/sounds/049.wav"></audio>
-        <audio data-key="85" src="http://carolinegabriel.com/demo/js-keyboard/sounds/050.wav"></audio>
-        <audio data-key="74" src="http://carolinegabriel.com/demo/js-keyboard/sounds/051.wav"></audio>
-        <audio data-key="75" src="http://carolinegabriel.com/demo/js-keyboard/sounds/052.wav"></audio>
-        <audio data-key="79" src="http://carolinegabriel.com/demo/js-keyboard/sounds/053.wav"></audio>
-        <audio data-key="76" src="http://carolinegabriel.com/demo/js-keyboard/sounds/054.wav"></audio>
-        <audio data-key="80" src="http://carolinegabriel.com/demo/js-keyboard/sounds/055.wav"></audio>
-        <audio data-key="186" src="http://carolinegabriel.com/demo/js-keyboard/sounds/056.wav"></audio>
-    </section>
-</div>
+        
+        <div class="lesson-content d-none" id="lesson-2">
+            <h1>Lesson 2: Basic Scales</h1>
+            <p></p>
+            {% include 'piano.html' %}
+        </div>
+        
+        <div class="lesson-content d-none" id="lesson-3">
+            <h1>Lesson 3: Chords</h1>
+            <p></p>
+            {% include 'piano.html' %}
+        </div>
+      </div>
+    </div>
+
+    <script src="../static/js/piano.js"></script>
+    <script src="../static/js/lessons.js"></script>
+    <script src="../static/images/notes/c-1.png"></script>
+
 {% endblock %}

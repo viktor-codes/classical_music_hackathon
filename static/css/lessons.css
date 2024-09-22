@@ -1,3 +1,11 @@
+h1 {
+    font-size: 2rem;
+}
+
+.lesson-content h1, .lesson-content p, .lesson-content ul {
+    color: var(--light-text);
+}
+
 .lesson-section {
     width: 100%;
     display: flex;
@@ -15,9 +23,9 @@
     left: 0;
     height: 100%;
     width: 80px;
-    background-color: #12171e;
+    /* background-color: #12171e; */
     padding: 0.4rem 0.8rem;
-    transition: all 0.5s ease;
+    transition: all 0.5s ease-in-out;
 }
 
 .sidebar.active ~ .main-content {
@@ -116,3 +124,27 @@
     text-align: center;
 }
 
+.lesson-tab {
+    background-color: #f0ad4e; /* Customize this */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 5px;
+    color: #fff;
+}
+
+.lesson-tab.active {
+    background-color: #ffc107; /* Active state color */
+}
+
+.lesson-content {
+    display: none;
+}
+
+.lesson-content:not(.d-none) {
+    display: block;
+}
+
+.highlight {
+    background-color: #ffc107; /* Highlight color for piano keys */
+}
