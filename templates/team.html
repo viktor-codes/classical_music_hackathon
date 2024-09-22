@@ -8,32 +8,44 @@
         <img src="{% static 'images/team.svg' %}" alt="Example Image" usemap="#image-map">
     
 <!-- Circle 1: Marc -->
-<a href="https://github.com/marcgithub23" class="circle circle-1" target="_blank">
+<a href="https://github.com/marcgithub23" class="circle circle-1" target="_blank"
+   data-bs-toggle="tooltip"
+   data-bs-title="<img src='{% static 'images/marc.jpeg' %}' class='tooltip-img' />">
     <div class="cross"></div>
 </a>
 
 <!-- Circle 2: Leonie -->
-<a href="https://github.com/leoniemclaughlin7" class="circle circle-2" target="_blank">
+<a href="https://github.com/leoniemclaughlin7" class="circle circle-2" target="_blank"
+data-bs-toggle="tooltip"
+   data-bs-title="<img src='{% static 'images/leonie.jpeg' %}' class='tooltip-img' />">
     <div class="cross"></div>
 </a>
 
 <!-- Circle 3: Viktor -->
-<a href="https://github.com/viktor-codes" class="circle circle-3" target="_blank">
+<a href="https://github.com/viktor-codes" class="circle circle-3" target="_blank"
+data-bs-toggle="tooltip"
+   data-bs-title="<img src='{% static 'images/linkedin.jpg' %}' class='tooltip-img' />">
     <div class="cross"></div>
 </a>
 
 <!-- Circle 4: Mia -->
-<a href="https://github.com/MiaRasmussen05" class="circle circle-4" target="_blank">
+<a href="https://github.com/MiaRasmussen05" class="circle circle-4" target="_blank"
+data-bs-toggle="tooltip"
+   data-bs-title="<img src='{% static 'images/mia.jpeg' %}' class='tooltip-img' />">
     <div class="cross"></div>
 </a>
 
 <!-- Circle 5: Joseph -->
-<a href="https://github.com/itjosephk2" class="circle circle-5" target="_blank">
+<a href="https://github.com/itjosephk2" class="circle circle-5" target="_blank"
+data-bs-toggle="tooltip"
+   data-bs-title="<img src='{% static 'images/joseph.jpeg' %}' class='tooltip-img' />">
     <div class="cross"></div>
 </a>
 
 <!-- Circle 6: Eve -->
-<a href="https://github.com/evernairn03" class="circle circle-6" target="_blank">
+<a href="https://github.com/evernairn03" class="circle circle-6" target="_blank"
+data-bs-toggle="tooltip"
+   data-bs-title="<img src='{% static 'images/eve.jpeg' %}' class='tooltip-img' />">
     <div class="cross"></div>
 </a>
     
@@ -47,5 +59,22 @@
         <area shape="circle" coords="375,325,25" href="https://github.com/Ilyas355" alt="Ilyas" title="Ilyas">
     </map>
     
-</section>
+    <script>
+        // Select all tooltip triggers
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        
+        // Initialize Bootstrap tooltips
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl, {
+            html: true,
+            animation: true,
+            placement: 'bottom' 
+        }));
+        $(function () {
+            $('a[data-bs-toggle="tooltip"]').tooltip({
+                html: true ,
+                placement: 'top',
+            });
+        });
+    </script>
+
 {% endblock %}

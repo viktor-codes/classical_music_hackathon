@@ -78,3 +78,11 @@ img {
 	top: 55%; /* Adjust as needed */
 	left: 81%; /* Adjust as needed */
 }
+
+.tooltip-img {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	object-fit: cover;
+	opacity: 1;
+}
