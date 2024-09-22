@@ -1,5 +1,6 @@
 // const keys = document.querySelectorAll('.key');
-const notes = {Array.from(keys).map(key => key.getAttribute('data-note'));}
+const notes = Array.from(keys).map(key => key.getAttribute('data-note'));
+
 // const notes = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B']
 
 const startButton = document.getElementById('start-btn');
@@ -17,9 +18,12 @@ const maxRounds = 10;
 let score = 0;
 let currentRound = 0;
 let currentNote = '';
+let isStarted = false; // game state
+
 
 // Event listeners
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('doc loaded')
     startButton.addEventListener('click', startChallenge);
 
     nextButton.addEventListener('click', () => {
@@ -34,12 +38,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     homeButton.addEventListener('click', goHome);
 
-    window.addEventListener('keydown', selectAnswer);
+    
+});
 
-    keys.forEach(key => {
-        key.addEventListener("click", selectAnswer);
-        key.addEventListener("transitionend", removeTransition);
-    });
+window.addEventListener('keydown', selectAnswer);
+
+keys.forEach(key => {
+    key.addEventListener("click", selectAnswer);
+    key.addEventListener("transitionend", removeTransition);
 });
 
 // Function to generate random note
@@ -49,6 +55,8 @@ function getRandomNote() {
 
 // Function to start new round
 function startChallenge() {
+    console.log('challenege has started');
+    isStarted = true;
     // currentNote = getRandomNote();
     // document.getElementById('#').innerText = 'Press the correct key for the note: ' + currentNote;
     // currentRound++;
@@ -63,8 +71,11 @@ function startChallenge() {
 }
 
 function setNextNote() {
+    console.log('Setting next Note')
+    console.log('Score: ' + score);
     resetState();
     currentNote = getRandomNote();
+    console.log(currentNote);
     showNote(currentNote);
     currentRound++;
     challengeProgress.innerText = `Round ${currentRound} of ${maxRounds}`;
@@ -81,6 +92,9 @@ function resetState() {
 
 // Highlight the pressed key
 function highlightKey(key, className) {
+    console.log(key);
+    console.log('Class name: ' + className);
+    console.log('we are highlighting the key');
     key.classList.add(className);
     setTimeout(() => {
         key.classList.remove(className);
@@ -89,29 +103,45 @@ function highlightKey(key, className) {
 
 // Handle key press
 function selectAnswer(e) {
+    console.log('clicked');
     let keyCode;
 
     if (e.type === 'keydown') {
+        console.log('you pressed a key');
         keyCode = e.keyCode;
     } else if (e.type === 'click') {
+        console.log('You clicked. key')
         keyCode = e.currentTarget.getAttribute("data-key");
     }
 
-    const selectedKey = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+    console.log(keyCode);
+
+    const selectedKey = document.querySelector(`.key[data-key="${keyCode}"]`);
     
+    console.log(selectedKey)
+
     if (!selectedKey) return;
 
     const userAnswer = selectedKey.getAttribute('data-note');
+    console.log('User Answer: ' + userAnswer);
     const correctKey = document.querySelector(`.key[data-note="${currentNote}"]`);
+    console.log(correctKey);
+
+
 
     if (userAnswer === currentNote) {
-        highlightKey(userAnswer, 'correct');
+        console.log('correct');
+        highlightKey(selectedKey, 'correct');
+        console.log('above line passes');
         score++;
+        console.log('Score: ' + score)
     } else {
+        console.log('incorrect')
         highlightKey(userAnswer, 'incorrect');
         highlightKey(correctKey, 'correct');
     }
-
+    console.log('Do we get to here');
+    setNextNote();
     // document.getElementById('score').innerText = 'Score: ' + score + '/' + maxRounds;
     // startNewRound();
 

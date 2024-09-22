@@ -1,5 +1,5 @@
+const note = document.querySelector(".nowplaying");
 const keys = document.querySelectorAll(".key"),
-  note = document.querySelector(".nowplaying"),
   hints = document.querySelectorAll(".hints"),
   hintButton = document.querySelector(".hint-btn"),
   keysContainer = document.querySelector(".keys")

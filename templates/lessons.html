@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="lesson-section">
+    <section class="container-fluid main-content">
+        <p style='color: #fff;'>
+            Toggle the slider to show where the notes are
+        </p>
+        <h1>The Musical Alphabet</h1>
+        <p>
+        The first thing you need to know is that each note has a name and that notes are ordered like the English alphabet. 
+        We name notes from A to G and then repeat from A again. These are the names of all the white keys:
+        </p>
+
+        <p>
+            The black keys have names too. Actually, there are two possible names for them, but don’t worry too much about the black keys for now—focus on the white keys first. (The “♯” symbol means “sharp” and the “♭” symbol means “flat.”)
+        </p>
+        <div class="row d-flex justify-content-center w-100">
+            <div class="lessons-piano-wrapper">
+                <div class="d-flex justify-content-center mt-5">
+                    <div class="nowplaying"style="width: 100%"></div>
+                </div>
+                <div class="keyboard mt-5 ">
+
+                    <div >
+                        <div class="toggle-box d-flex justify-content-end me-4">
+                            <div class="toggle-wrapper hint-btn" id="hintButton">
+                                <div class="circle"></div>
+                                <span class="text">OFF</span>
+                            </div>
+                        </div>
+                        <div class="keys-wrapper">
+                            <div class="keys">
+                                <div data-key="65" class="key" data-note="c4">
+                                    <span class='hints'>C</span>
+                                </div>
+                                <div data-key="87" class="key sharp" data-note="C#">
+                                    <span class='hints'>C#</span>
+                                </div>
+                                <div data-key="83" class="key" data-note="D">
+                                    <span class='hints'>D</span>
+                                </div>
+                                <div data-key="69" class="key sharp" data-note="D#">
+                                    <span class='hints'>D#</span>
+                                </div>
+                                <div data-key="68" class="key" data-note="E">
+                                    <span class='hints'>E</span>
+                                </div>
+                                <div data-key="70" class="key" data-note="F">
+                                    <span class='hints'>F</span>
+                                </div>
+                                <div data-key="84" class="key sharp" data-note="F#">
+                                    <span class='hints'>F#</span>
+                                </div>
+                                <div data-key="71" class="key" data-note="G">
+                                    <span class='hints'>G</span>
+                                </div>
+                                <div data-key="89" class="key sharp" data-note="G#">
+                                    <span class='hints'>G#</span>
+                                </div>
+                                <div data-key="72" class="key" data-note="A">
+                                    <span class='hints'>A</span>
+                                </div>
+                                <div data-key="85" class="key sharp" data-note="Bb">
+                                    <span class='hints'>Bb</span>
+                                </div>
+                                <div data-key="74" class="key" data-note="B">
+                                    <span class='hints'>B</span>
+                                </div>
+                                <div data-key="75" class="key" data-note="C">
+                                    <span class='hints'>C</span>
+                                </div>
+                                <div data-key="79" class="key sharp" data-note="C#">
+                                    <span class='hints'>C#</span>
+                                </div>
+                                <div data-key="76" class="key" data-note="D">
+                                    <span class='hints'>D</span>
+                                </div>
+                                <div data-key="80" class="key sharp" data-note="D#">
+                                    <span class='hints'>D#</span>
+                                </div>
+                                <div data-key="186" class="key" data-note="E">
+                                    <span class='hints'>E</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <audio data-key="65" src="http://carolinegabriel.com/demo/js-keyboard/sounds/040.wav"></audio>
+        <audio data-key="87" src="http://carolinegabriel.com/demo/js-keyboard/sounds/041.wav"></audio>
+        <audio data-key="83" src="http://carolinegabriel.com/demo/js-keyboard/sounds/042.wav"></audio>
+        <audio data-key="69" src="http://carolinegabriel.com/demo/js-keyboard/sounds/043.wav"></audio>
+        <audio data-key="68" src="http://carolinegabriel.com/demo/js-keyboard/sounds/044.wav"></audio>
+        <audio data-key="70" src="http://carolinegabriel.com/demo/js-keyboard/sounds/045.wav"></audio>
+        <audio data-key="84" src="http://carolinegabriel.com/demo/js-keyboard/sounds/046.wav"></audio>
+        <audio data-key="71" src="http://carolinegabriel.com/demo/js-keyboard/sounds/047.wav"></audio>
+        <audio data-key="89" src="http://carolinegabriel.com/demo/js-keyboard/sounds/048.wav"></audio>
+        <audio data-key="72" src="http://carolinegabriel.com/demo/js-keyboard/sounds/049.wav"></audio>
+        <audio data-key="85" src="http://carolinegabriel.com/demo/js-keyboard/sounds/050.wav"></audio>
+        <audio data-key="74" src="http://carolinegabriel.com/demo/js-keyboard/sounds/051.wav"></audio>
+        <audio data-key="75" src="http://carolinegabriel.com/demo/js-keyboard/sounds/052.wav"></audio>
+        <audio data-key="79" src="http://carolinegabriel.com/demo/js-keyboard/sounds/053.wav"></audio>
+        <audio data-key="76" src="http://carolinegabriel.com/demo/js-keyboard/sounds/054.wav"></audio>
+        <audio data-key="80" src="http://carolinegabriel.com/demo/js-keyboard/sounds/055.wav"></audio>
+        <audio data-key="186" src="http://carolinegabriel.com/demo/js-keyboard/sounds/056.wav"></audio>
+    </section>
+</div>
+{% endblock %}

@@ -6,6 +6,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("users.urls")),
+    path("lessons/", include("lessons.urls")),
     path("challenge/", include("challenge.urls")),
     path("accounts/", include("django.contrib.auth.urls")),
     path("__reload__/", include("django_browser_reload.urls")),
