@@ -2,18 +2,42 @@
 {% load static %}
 {% block content %}
 <div class="lesson-section">
-    <section class="container-fluid main-content">
+    <section class="container-fluid main-content container">
+        <h1 style='color: #fff;'>The Musical Alphabet</h1>
+        <p style='color: #fff;'>
+            There are 8 white notes. We name notes from A to G and then repeat from A again.
+            The black keys have names too. They are named as either sharp (#) or flat (b) of the note beside them. For example black note right of F is F# it is also Left of G so it can be called Gb too. This means that there is two possible names for all the the black notes
+        </p>
+        <ul style='color: #fff'>
+            <li>C</li>
+            <li>C♯ or D♭</li>
+            <li>D</li>
+            <li>D# or Eb</li>
+            <li>E</li>
+            <li>F</li>
+            <li>F# or Gb</li>
+            <li>G</li>
+            <li>G# or Ab</li>
+            <li>A</li>
+            <li>A# or Bb</li>
+            <li>B</li>
+        </ul>
+        <p style='color: #fff;'>
+            These 12 notes just repeat over and over again on the keyboard.
+            If you’re new to the piano, here is a quick way to remember where notes are:
+        </p>
+        <ul style="color: #fff">
+            <li>C is on the left of the group of the two black keys</li>
+            <li>D is in the middle of the group of the two black keys</li>
+            <li>E is on the right of the group of the two black keys</li>
+            <li>F is on the left of the group of the three black keys</li>
+            <li>G is in the middle left of the group of the three black keys</li> 
+            <li>A is in the middle right of the group of the three black keys</li> 
+            <li>B is on the right of the group of the three black keys</li>
+        </ul>
+
         <p style='color: #fff;'>
             Toggle the slider to show where the notes are
-        </p>
-        <h1>The Musical Alphabet</h1>
-        <p>
-        The first thing you need to know is that each note has a name and that notes are ordered like the English alphabet. 
-        We name notes from A to G and then repeat from A again. These are the names of all the white keys:
-        </p>
-
-        <p>
-            The black keys have names too. Actually, there are two possible names for them, but don’t worry too much about the black keys for now—focus on the white keys first. (The “♯” symbol means “sharp” and the “♭” symbol means “flat.”)
         </p>
         <div class="row d-flex justify-content-center w-100">
             <div class="lessons-piano-wrapper">
@@ -21,8 +45,7 @@
                     <div class="nowplaying"style="width: 100%"></div>
                 </div>
                 <div class="keyboard mt-5 ">
-
-                    <div >
+                    <div>
                         <div class="toggle-box d-flex justify-content-end me-4">
                             <div class="toggle-wrapper hint-btn" id="hintButton">
                                 <div class="circle"></div>
