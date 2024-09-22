@@ -18,46 +18,54 @@
 			<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
 				aria-labelledby="offcanvasNavbarLabel">
 				<div class="offcanvas-header">
-					<h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+					<h4 class="offcanvas-title" id="offcanvasNavbarLabel">Rhythm Ready</h4>
 					<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
 						aria-label="Close"></button>
 				</div>
 				<div class="offcanvas-body p-0">
-					<ul
-						class="navbar-nav justify-content-center align-self-center flex-grow-1 ms-0 p-3 pb-2 p-lg-0">
-						<li class="nav-item mb-2 mb-lg-0">
-							<a class="nav-link link fs-5 fw-bold text-dark" href="">Lessons</a>
+					<ul class="navbar-nav justify-content-center align-self-center flex-grow-1 ms-0 p-3 pb-2 p-lg-0">
+						{% if user.is_authenticated %}
+						<li class="nav-item mb-0 mb-lg-0">
+							<a class="nav-link link fs-5 fw-bold link-nav d-block d-lg-none"
+								href="">Profile</a>
 						</li>
-						<li class="nav-item mb-2 mb-lg-0">
-							<a class="nav-link link fs-5 fw-bold text-dark" href="{% url 'challenge' %}">Challenges</a>
+						{% endif %}
+						<li class="nav-item mb-2 mb-lg-0"></li>
+							<a class="nav-link link fs-5 fw-bold link-nav d-block d-lg-none"
+								href="{% url 'home' %}">Home</a>
 						</li>
-						<li class="nav-item mb-2 mb-lg-0">
-							<a class="nav-link link fs-5 fw-bold text-dark" href="">Team</a>
+						<li class="nav-item mb-1 mb-lg-0">
+							<a class="nav-link link fs-5 fw-bold link-nav link-underline" href="">Lessons</a>
+						</li>
+						<li class="nav-item mb-1 mb-lg-0">
+							<a class="nav-link link fs-5 fw-bold link-nav link-underline" href="{% url 'challenge' %}">Challenges</a>
+						</li>
+						<li class="nav-item mb-1 mb-lg-0">
+							<a class="nav-link link fs-5 fw-bold link-nav link-underline" href="{% url 'team' %}">Team</a>
 						</li>
 					</ul>
 
 					<ul class="navbar-nav justify-content-end align-self-center">
 						{% if user.is_authenticated %}
 						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle d-none d-lg-block pe-3 ps-lg-0 me-5 text-black"
-								href="#" id="offcanvasNavbarDropdownFirst" role="button" data-bs-toggle="dropdown"
-								aria-expanded="false">
-								<i class="fas fa-user"></i>
-							</a>
-							<a class="nav-link link dropdown-toggle d-block d-lg-none ps-3 pe-lg-0 me-4" href="#"
+							<a class="nav-link link dropdown-toggle d-none d-lg-block ps-3 pe-lg-0 me-4 primary" href="#"
 								id="offcanvasNavbarDropdownSecond" role="button" data-bs-toggle="dropdown"
 								aria-expanded="false">
-								Profile
+								<i class="fas fa-user text-dark"></i>
 							</a>
-							<ul class="dropdown-menu drop-menu border-0" aria-labelledby="offcanvasNavbarDropdownSecond">
+							<ul class="dropdown-menu drop-menu border-0 px-4" aria-labelledby="offcanvasNavbarDropdownSecond">
 								<li>
-									<a class="dropdown-item link fs-5 p-0 mb-2 ms-3"
+									<a class="dropdown-item drop-menu-item link fs-5 fw-bold p-0 mb-2"
 										href="">Profile</a>
 								</li>
-								<li><a class="dropdown-item link logout-nav fs-5 p-0 mt-5 mb-2 ms-3 text-dark"
+								<li class="border-light border-top mt-5"></li>
+								<li><a class="dropdown-item drop-menu-item link logout-nav fs-5 p-0 mb-2 mt-3"
 										href="{% url 'logout' %}">Logout</a></li>
 							</ul>
 						</li>
+						<li class="border-light border-top pt-5 d-block d-lg-none"></li>
+						<li><a class="dropdown-item nav-link link logout-nav fs-5 p-0 mt-3 mb-2 ms-3 link-nav d-block d-lg-none"
+								href="{% url 'logout' %}">Logout</a></li>
 						{% else %}
 						<li class="nav-item">
 							<a class="nav-link link fs-5 mt-5 mt-lg-0 ms-3 fw-bold text-dark" href="{% url 'login' %}">Login</a>
