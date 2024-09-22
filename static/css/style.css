@@ -71,3 +71,7 @@ h1, .lead{
 .about {
     box-shadow: none;
 }
+
+.hide {
+    display: none;
+}
