@@ -8,6 +8,9 @@ from django.views.generic.edit import CreateView
 def home(request):
     return render(request, "index.html")
 
+def team(request):
+    return render(request, "team.html")
+
 
 class SignUpView(SuccessMessageMixin, CreateView):
     template_name = "users/register.html"
