@@ -4,11 +4,28 @@
 {% block title %}Login{% endblock title %} 
 
 {%block content %}
-<div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+
+
+<div class="form-signin d-flex justify-content-center align-self-center my-5">
+	<div class="col-3 my-5">
+		<form class="col-12 lead" action="#" method="POST">
+			<h1 class="h3 mb-3 fw-normal text-center">Login</h1>
+				{% csrf_token %}
+				{{ form|crispy }}
+				<p class=" mb-4 mt-0">
+					Don't have an account?
+					<a href="{% url 'register' %}" class="name" >Sign Up</a >
+				</p>
+			<div class="w-100 d-grid gap-2 mb-5">
+				<button type="submit" class="btn primary-fill-btn fw-bold" > Sign in </button>
+			</div>
+		</form>
+	</div>
+</div>
+
+<!-- <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
 	<div class="sm:mx-auto sm:w-full sm:max-w-sm">
-		<h2
-			class="text-center text-2xl font-bold leading-9 tracking-tight text-gray-900"
-		>
+		<h2 class="text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
 			Login
 		</h2>
 	</div>
@@ -17,9 +34,6 @@
 		<form class="space-y-6" action="#" method="POST">
 			{% csrf_token %}
 			{{ form|crispy }}
-					
-
-
 			<div>
 				<button
 					type="submit"
@@ -39,5 +53,7 @@
 			>
 		</p>
 	</div>
-</div>
+</div> -->
+
+{% block footertop %}<footer class="border-top">{% endblock footertop %}
 {% endblock %}
