@@ -146,7 +146,7 @@ body {
     transform: translateY(5px) rotateX(43deg);
   }
   
-  .hints {
+  .hints, notes {
     width: 100%;
     position: absolute;
     bottom: 7px;

@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     "users",
     "tailwind",
     "theme",
+    "lessons",
     "django_browser_reload",
     "crispy_forms",  # new
     "crispy_tailwind",

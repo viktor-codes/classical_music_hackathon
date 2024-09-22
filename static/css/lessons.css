@@ -1,0 +1,14 @@
+.lesson-section {
+    width: 100%;
+    display: flex;
+}
+.lessons-piano-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hints {
+    text-align: center;
+}
