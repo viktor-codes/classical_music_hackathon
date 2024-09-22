@@ -201,9 +201,9 @@ body {
   }
 
   .correct {
-    background-color: green!important;
+    background: green!important;
   }
 
   .incorrect {
-    background-color: red!important;
+    background: red!important;
   }
