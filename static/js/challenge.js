@@ -90,10 +90,6 @@ function resetState() {
 
 // Highlight the pressed key
 function highlightKey(key, className) {
-    console.log('we are highlighting the key');
-    console.log('Selected Key:')
-    console.log(key)
-    console.log('Class name: ' + className);
     key.classList.add(className);
     // key.classList.remove(className);
 }

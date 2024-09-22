@@ -200,10 +200,10 @@ body {
     transform: translateX(-30px);
   }
 
-.correct {
-  background-color: green;
-}
+  .correct {
+    background-color: green!important;
+  }
 
-.incorrect {
-  background-color: red;
-}
+  .incorrect {
+    background-color: red!important;
+  }
