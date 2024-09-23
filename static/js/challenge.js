@@ -15,6 +15,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     loadScores();
 
+    // Random facts about classical music
+    const randomFacts = [
+        "Ludwig van Beethoven composed most of his music while being completely deaf.",
+        "Wolfgang Amadeus Mozart wrote his first symphony when he was just 8 years old.",
+        "Johann Sebastian Bach was known for his improvisational skills at the organ.",
+        "Antonio Vivaldi composed over 500 concertos, many of which were for the violin.",
+        "Franz Schubert was one of the first composers to write Lieder, or German art songs."
+    ];
+
     // Event listeners
     startButton.addEventListener('click', startChallenge);
     resetButton.addEventListener('click', restartChallenge);
@@ -55,8 +64,8 @@ document.addEventListener('DOMContentLoaded', function () {
         isGamePaused = true;
         isStarted = false;
         clearInterval(countdownTimer);
-        alert(`Game Over! Your final score is: ${score}`);
-        saveScore(); // Save score to local storage
+        saveScore();
+        showGameOverModal();
     }
 
     function setNextNote() {
@@ -163,17 +172,19 @@ document.addEventListener('DOMContentLoaded', function () {
         const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
         console.log("Top 10 High Scores: ", highScores);
     }
+
+    function showGameOverModal() {
+        const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+        const highScore = highScores.length > 0 ? highScores[0] : score;
+        const randomFact = randomFacts[Math.floor(Math.random() * randomFacts.length)];
+
+        // Update modal content
+        document.getElementById('final-score').innerText = score;
+        document.getElementById('high-score').innerText = highScore;
+        document.getElementById('random-fact').innerText = randomFact;
+
+        // Show the modal
+        var myModal = new bootstrap.Modal(document.getElementById('gameOverModal'));
+        myModal.show();
+    }
 });
-
-function loadScores() {
-    const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
-    const scoreTableBody = document.getElementById('scoreTableBody');
-
-    highScores.slice(0, 10).forEach((score, index) => {
-        const row = document.createElement('tr');
-        row.innerHTML = `<td>${index + 1}</td><td>${score}</td>`;
-        scoreTableBody.appendChild(row);
-    });
-}
-
-document.addEventListener('DOMContentLoaded', loadScores);
