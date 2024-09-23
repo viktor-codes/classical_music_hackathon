@@ -60,17 +60,7 @@
 								<li class="border-light border-top mt-5"></li>
 								<li><a type="button" class="dropdown-item drop-menu-item link logout-nav fs-5 p-0 mb-2 mt-3"
 									data-bs-toggle="modal" data-bs-target="#logoutModal">Logout</a></li>
-							</ul>
-
-
-
-
-
-
-
-
-
-								
+							</ul>	
 						{% else %}
 						<li class="nav-item">
 							<a class="nav-link link fs-5 mt-5 mt-lg-0 ms-3 fw-bold text-dark" href="{% url 'login' %}">Login</a>
@@ -88,60 +78,3 @@
 </header>
 {% endblock %}
 
-
-
-
-
-<!-- <header class="bg-teal-700 text-white sticky top-0 z-10">
-	<section class="max-w-4xl mx-auto p-4 flex justify-between items-center">
-		<h1 class="text-3xl font-medium">
-			<a href="#hero"> 🎹 Rhythm Ready </a>
-		</h1>
-		<div>
-			<button
-				id="hamburger-button"
-				class="text-3xl md:hidden cursor-pointer relative w-8 h-8"
-			> -->
-				<!-- &#9776; -->
-				<!-- <div
-					class="bg-white w-8 h-1 rounded absolute top-4 -mt-0.5 transition-all duration-500 before:content-[''] before:bg-white before:w-8 before:h-1 before:rounded before:absolute before:-translate-x-4 before:-translate-y-3 before:transition-all before:duration-500 after:content-[''] after:bg-white after:w-8 after:h-1 after:rounded after:absolute after:-translate-x-4 after:translate-y-3 after:transition-all after:duration-500"
-				></div>
-			</button>
-			<nav class="hidden md:block space-x-8 text-xl" aria-label="main">
-				<a href="#lessons" class="hover:opacity-90">Lessons</a>
-				<a href="{% url 'challenge' %}" class="hover:opacity-90">Challenges</a>
-				<a href="#our_team" class="hover:opacity-90">Our Team</a>
-				<a href="{% url 'register' %}" class="hover:opacity-90">Register</a>
-				
-				{% if user.is_authenticated %}
-				<a href="{% url 'logout' %}" class="hover:opacity-90">Logout</a>
-				{% else %}
-				<a href="{% url 'login' %}" class="hover:opacity-90">Login</a>
-				{% endif %}
-			</nav>
-		</div>
-	</section>
-	<section
-		id="mobile-menu"
-		class="absolute top-68 bg-black w-full text-5xl flex-col justify-content-center origin-top animate-open-menu hidden"
-	> -->
-		<!-- <button class="text-8xl self-end px-6">
-						&times;
-				</button> -->
-		<!-- <nav
-			class="flex flex-col min-h-screen items-center py-8"
-			aria-label="mobile"
-		>
-			<a href="{% url 'home' %}" class="w-full text-center py-6 hover:opacity-90">Home</a>
-			<a href="#lessons" class="w-full text-center py-6 hover:opacity-90"
-				>Lessons</a
-			>
-			<a href="#challenges" class="w-full text-center py-6 hover:opacity-90"
-				>Challenges</a
-			>
-			<a href="#our_team" class="w-full text-center py-6 hover:opacity-90"
-				>Our Team</a
-			>
-		</nav>
-	</section>
-</header> -->
