@@ -28,16 +28,16 @@ This learning application is intended for:
 
 ## Wireframes 
 ### Home
-<img src="docs/readme-images/home-page.png">
+<img src="https://imgur.com/zJPjSyn">
 
 ### Lessons 
-<img src="docs/readme-images/lessons.png">
+<img src="https://imgur.com/TZeaJEt">
 
 ### Challenge
-<img src="docs/readme-images/challenge.png">
+<img src="https://imgur.com/VZYNP0a">
 
 ### Team
-<img src="docs/readme-images/team.png">
+<img src="https://imgur.com/eODCTmC">
 
 ## Design
 
@@ -47,7 +47,7 @@ The objective of this project was to design a learning application that is easy 
 
 The colour palette for this learning application was chosen as it represented classical music, it has a richness and classical aesthetic associated with it.   
 
-<img src="docs/readme-images/coolors-rhythm-ready.png">
+<img src="https://imgur.com/OFSUfu8">
 
 # Technologies used
 * <b>JavaScript</b> - Custom JavaScript was used in the development of this application.
