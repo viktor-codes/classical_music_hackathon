@@ -1,3 +1,4 @@
+[back to README](./README.md)
 # Testing
 
 ## Manual Testing
@@ -19,21 +20,20 @@ Usability was tested with the below user acceptance testing.
 | Log Out     |                        |                  |      |             |
 | 1           | Click on logout button | Bring up logout page | N |   n/a  |
 | 2           | Confirm and click on sign out button | Redirect to homepage with confirmation message | N |   n/a  |
-| Profile     |                        |                  |      |             |
-| 1           | Click on my profile on navbar | Bring up profile page | N |   n/a   |
-| 2           | Click on edit profile button | Bring edit profile page form | N |   n/a  |
 | Home Page     |                        |                  |      |             |
 | 1           | Click on logo brand | Bring up home page | Y |   Logo brand on navbar   |
 | Lessons Page     |                        |                  |      |             |
 | 1           | Click on lessons link on navbar | Bring up lessons page | Y |  n/a   |
-| Challenges Page     |                        |                  |      |             |
-| 1           | Click on challenges link on navbar | Bring up challenges page | Y |  n/a   |
-| 2           | Click on start button | Start challenge | Y |  n/a   |
-| 3           | Click on next button | Show next note to guess | Y |  n/a   |
-| 4           | Click on quit button | Quit challenge | Y |  Redirect to homepage   |
+| Game Page     |                        |                  |      |             |
+| 1           | Click on game link on navbar | Bring up game page | Y |  n/a   |
+| 2           | Click on start button | Start challenge and timer | Y |  n/a   |
+| 3           | Click on restart button | Restart challenge | Y |  n/a   |
 | Team Page     |                        |                  |      |             |
 | 1           | Click on team link on navbar | Bring up team page | Y |  n/a   |
 | 2           | Click on faces | Redirect to GitHub/LinkedIn profiles | Y |  n/a   |
+| Highscore Page     |                        |                  |      |             |
+| 1           | Click on highscore link on dropdown menu when logged in | Bring up highscore page | Y |  n/a   |
+| 2           | Click on back to game | Redirect to game page | Y |  n/a   |
 
 ---
 
@@ -41,13 +41,16 @@ Usability was tested with the below user acceptance testing.
 
 | User Goals | Requirement met |
 | ------------------------- | --------------- |
-| User Story 1 | Y |
-| User Story 2 | Y |
-| User Story 3 | Y |
-| User Story 4 | Y |
-| User Story 5 | Y |
-| User Story 6 | Y |
-| User Story 7 | Y |
+| As a user I can navigate the site so that I can find what I'm looking for easily. | Y |
+| As a user I can easily see and comprehend the piano on the site so that I can interact with the piano. | Y |
+| As a user I can play the piano on the site so that I can learn about piano. | Y |
+| As a user I can partake in a challenge so that I can test my knowledge. | Y |
+| As a user I can partake in lessons so that I can improve my piano skills. | Y |
+| As a user I can view related content to my piano lesson so that I can learn piano effectively. | Y |
+| As a user I can navigate to the lesson page so I can find what I'm looking for easily. | Y |
+| As a user I can test my skills so that I can determine if I am learning. | Y |
+| As a user I can view the team page so that I am aware of who contributed to the application. | Y |
+| As a user I can view the site on different devices so I can access the application anywhere | Y |
 
 ---
 
@@ -67,6 +70,9 @@ The official [W3C](https://validator.w3.org/) validator was used to validate HTM
 [screenshot]
 
 #### Team page
+[screenshot]
+
+#### Higschore page
 [screenshot]
 
 ### CSS Validation:
@@ -146,6 +152,9 @@ Code Institute's [CI Python Linter](https://pep8ci.herokuapp.com/) was used to v
 #### Team page
 [screenshot]
 
+#### Highscore page
+[screenshot]
+
 ---
 
 ## Responsiveness
@@ -153,16 +162,18 @@ Code Institute's [CI Python Linter](https://pep8ci.herokuapp.com/) was used to v
 Bootstrap was used for the majority of styling and designing the layout and display of the website, which is a responsive mobile first design. The responsiveness was checked manually by using devtools (Chrome) throughout the whole development.
 
 ### Desktop
-[screenshot]
+![large screen](./readme-images/large-screen.png)
 
 ### Tablet
-[screenshot]
+![medium screen](./readme-images/medium-screen.png)
 
 ### Phone
-[screenshot]
+![small screen](./readme-images/small-screen.png)
 
 ---
 
 ## Bugs
 
 There were no known bugs at the time of submission of this project.
+
+[back to README](./README.md)
