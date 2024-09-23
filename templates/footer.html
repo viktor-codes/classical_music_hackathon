@@ -1,28 +1,3 @@
-<!-- <footer id="footer" class="bg-teal-700 text-white text-xl">
-	<section class="max-w-4xl mx-auto p-4 flex flex-col sm:flex-row sm:justify-between">
-		<div class="flex flex-col sm:gap-2">
-			<p class="text-right">Copyright &copy; <span id="year">2024</span></p>
-			<p class="text-right">Team Name</p>
-		</div>
-		<div>
-			<h2>Name</h2>
-			Email:
-			<a href="mailto:injwwkhwnkj@kjnkjfn.com">admin@admin.com</a><br />
-		</div>
-
-		<nav class="hidden md:flex flex-col gap-2" aria-label="footer">
-			<a href="#hero" class="hover:opacity-90">Home</a>
-			<a href="#lessons" class="hover:opacity-90">Lessons</a>
-			<a href="#challenges" class="hover:opacity-90">Challenges</a>
-			<a href="#our_team" class="hover:opacity-90">Our Team</a>
-		</nav>
-	</section>
-	<section class="max-w-4xl mx-autoflex flex-col sm:flex-row">
-		<p class="text-right">Copyright &copy; <span id="year" class="p-2">2024 </span></p>
-		<p class="text-right"> Team Name</p>
-	</section>
-</footer> -->
-
 <div class="container-fluid m-0">
 	{% block footertop %}<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 px-5 m-0 my-4 ">{% endblock footertop %}
 		<p class="col-md-4 mb-0 text-light">© 2024 Team Name</p>
@@ -34,7 +9,7 @@
 		<ul class="nav col-md-4 justify-content-end">
 		  <li class="nav-item"><a href="{% url 'home' %}" class="nav-link px-2 text-light" contenteditable="false" style="cursor: pointer;">Home</a></li>
 		  <li class="nav-item"><a href="{% url 'challenge' %}" class="nav-link px-2 text-light" contenteditable="false" style="cursor: pointer;">Lessons</a></li>
-		  <li class="nav-item"><a href="#" class="nav-link px-2 text-light" contenteditable="false" style="cursor: pointer;">Team</a></li>
+		  <li class="nav-item"><a href="{% url 'team' %}" class="nav-link px-2 text-light" contenteditable="false" style="cursor: pointer;">Team</a></li>
 		</ul>
 	  </footer>
 </div>
