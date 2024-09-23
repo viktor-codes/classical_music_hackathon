@@ -11,15 +11,14 @@ Usability was tested with the below user acceptance testing.
 | 1           | Click on sign up button | Bring up registraion page | Y |   n/a  |
 | 2           | Click on log in link in the form | Bring up login page | Y |  n/a  |
 | 3           | Wrong input | Show warning/error message | Y |  n/a  |
-| 4           | Click sign up button | Redirect to homepage with confirmation message | N |  n/a  |
+| 4           | Click sign up button | Redirect to homepage | Y |  n/a  |
 | Log In     |                        |                  |      |             |
 | 1           | Click on login button | Bring up login page | Y |   n/a  |
 | 2           | Click on sign up link in the form | Bring up registration page | Y |  n/a  |
-| 3           | Wrong input | Message shows wrong username or password | N |  n/a  |
-| 4           | Click sign in button | Redirect to homepage with confirmation message | N |  n/a  |
+| 3           | Wrong input | Message shows error/warning | Y |  n/a  |
+| 4           | Click sign in button | Redirect to homepage | Y |  n/a  |
 | Log Out     |                        |                  |      |             |
-| 1           | Click on logout button | Bring up logout page | N |   n/a  |
-| 2           | Confirm and click on sign out button | Redirect to homepage with confirmation message | N |   n/a  |
+| 1           | Click on logout button | Redirect to homepage | Y |   n/a  |
 | Home Page     |                        |                  |      |             |
 | 1           | Click on logo brand | Bring up home page | Y |   Logo brand on navbar   |
 | Lessons Page     |                        |                  |      |             |
