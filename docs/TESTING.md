@@ -62,104 +62,16 @@ Usability was tested with the below user acceptance testing.
 
 ## Validation
 
-### HTML Validation:
-
-The official [W3C](https://validator.w3.org/) validator was used to validate HTML.
-
-#### Homepage
-[screenshot]
-
-#### Lessons page
-[screenshot]
-
-#### Challenges page
-[screenshot]
-
-#### Team page
-[screenshot]
-
-#### Higschore page
-[screenshot]
-
-### CSS Validation:
-
-The official [W3C (Jigsaw)](https://jigsaw.w3.org/css-validator/#validate_by_uri) validator was used to validate CSS.
-
-#### styles CSS
-[screenshot]
-
-#### piano CSS
-[screenshot]
-
-#### challenge CSS
-[screenshot]
-
-#### lessons CSS
-[screenshot]
-
-#### OurTeams CSS
-[screenshot]
-
-#### styles CSS
-[screenshot]
-
-### JS Validation:
-
-The official [JSHint](https://www.jshint.com/) validator was used to validate JS.
-
-#### main JS
-[screenshot]
-
-#### piano JS
-[screenshot]
-
-#### challenge JS
-[screenshot]
-
-#### lessons JS
-[screenshot]
-
-#### toggle JS
-[screenshot]
-
-### Python Validation:
-
-Code Institute's [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate python.
-
-#### users app
-[screenshot]
-
-#### challenge app
-[screenshot]
-
-#### lessons app
-[screenshot]
-
-#### Root/top level (manage.py)
-[screenshot]
-
-#### music_hackathon main app
-[screenshot settings.py]
-[screenshot urls.py]
+- The official [W3C](https://validator.w3.org/) validator was used to validate HTML.
+- The official [W3C (Jigsaw)](https://jigsaw.w3.org/css-validator/#validate_by_uri) validator was used to validate CSS.
+- The official [JSHint](https://www.jshint.com/) validator was used to validate JS.
+- Code Institute's [CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate python.
 
 ---
 
 ## Lighthouse Report
 
-#### Homepage
-[screenshot]
-
-#### Lessons page
-[screenshot]
-
-#### Challenges page
-[screenshot]
-
-#### Team page
-[screenshot]
-
-#### Highscore page
-[screenshot]
+[Google Chrome lighthouse dev tool](https://developer.chrome.com/docs/lighthouse) was used to test the performance of the website.
 
 ---
 
@@ -175,11 +87,5 @@ Bootstrap was used for the majority of styling and designing the layout and disp
 
 ### Phone
 ![small screen](./readme-images/small-screen.png)
-
----
-
-## Bugs
-
-There were no known bugs at the time of submission of this project.
 
 [back to README](./README.md)
