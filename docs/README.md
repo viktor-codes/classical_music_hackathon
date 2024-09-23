@@ -214,4 +214,4 @@ Great thanks to all team members who contributed on this project.
 * [Joseph Keane](https://github.com/itjosephk2)
 * [Leonie McLaughlin](https://github.com/leoniemclaughlin7)
 * [Ilyas Hussein](https://github.com/Ilyas355)
-* [Marc](https://github.com/marcgithub23)
+* [Marc Dagohoy](https://github.com/marcgithub23)
