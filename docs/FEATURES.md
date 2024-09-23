@@ -51,7 +51,9 @@ The piano has a volume slider to increase or decrease volume level. It also has 
 ## Game page
 ![game page screenshot](./readme-images/game-screenshot.png)
 
-The game page allows users to practice the notes they have learned. The start button starts a timer and displays a random note on the screen and the users will have to click or press the correct key on the piano. They get one score for every correct answer and minus one for every wrong answer. Their current score is displayed. It also has restart button to start a new challenge.
+The game page allows users to practice the notes they have learned. The start button starts a timer and displays a random note on the screen and the users will have to click or press the correct key on the piano. They get one score for every correct answer and minus one for every wrong answer. Their current score is displayed. It also has restart button to start a new challenge. When game is over, a modal shows up with score and a fun fact.
+
+![gameover screenshot](./readme-images/gameover-screenshot.png)
 
 ## Team page
 ![team page screenshot](./readme-images/team-screenshot.png)
