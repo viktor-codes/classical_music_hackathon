@@ -42,6 +42,12 @@ h1 {
     background-color: var(--primary);
 }
 
+.sidebar .disabled a {
+    background-color: var(--background);
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
 .sidebar.active ~ .main-content {
     left: 250px;
     width: calc(100% - 250px);
@@ -97,6 +103,7 @@ h1 {
     border: 2px solid var(--primary);
     color: var(--primary);
 }
+
 .sidebar ul li a i {
     min-width: 50px;
     text-align: center;
@@ -165,4 +172,8 @@ h1 {
 
 .highlight {
     background-color: #ffc107; /* Highlight color for piano keys */
+}
+
+.lesson-td {
+    background-color: #fff!important;
 }
