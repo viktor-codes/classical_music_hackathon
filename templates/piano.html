@@ -4,8 +4,15 @@
 <section class="container-fluid">
     <div class="row d-flex justify-content-center w-100">
         <div>
-            <div class="keyboard mt-5 ">
-
+            <div class="d-flex justify-content-center">
+                <div class="music-wrapper mt-5 d-flex">
+                    <img class="me-3" src="https://imgur.com/olazcvS.png" alt="Note Image" />
+                    <div class="d-flex justify-content-end align-self-center ms-5">
+                        <div class="nowplaying ms-5"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="keyboard mt-5">
                 <div>
                     <div class="d-flex justify-between">
                       <div class="d-flex align-self-center">
@@ -18,7 +25,7 @@
                       </div>
                       <div class="toggle-box d-flex justify-content-end me-4">
                         <div class="toggle-wrapper hint-btn" id="hintButton">
-                            <div class="circle"></div>
+                            <div class="circle-toggle"></div>
                             <span class="text">OFF</span>
                         </div>
                       </div>
@@ -100,5 +107,4 @@
     <audio data-key="80" src="http://carolinegabriel.com/demo/js-keyboard/sounds/055.wav"></audio>
     <audio data-key="186" src="http://carolinegabriel.com/demo/js-keyboard/sounds/056.wav"></audio>
 </section>
-<script defer typ src="{% static 'js/script.js' %}"></script>
 {% endblock %}

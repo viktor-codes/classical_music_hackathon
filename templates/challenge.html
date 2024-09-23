@@ -10,71 +10,8 @@
                 <div id="score" class="score ms-5">SCORE: 0</div>
                 <div id="random-note" class="nowplaying ms-5"></div>
             </div>
-            <div class="keyboard mt-5 ">
-
-                <div>
-                    <div class="toggle-box d-flex justify-content-end me-4">
-                        <div class="toggle-wrapper hint-btn" id="hintButton">
-                            <div class="circle"></div>
-                            <span class="text">OFF</span>
-                        </div>
-                    </div>
-                    <div class="keys-wrapper">
-                        <div class="keys">
-                            <div data-key="65" class="key" data-note="C">
-                                <span class="hints">A</span>
-                            </div>
-                            <div data-key="87" class="key sharp" data-note="C#">
-                                <span class="hints">W</span>
-                            </div>
-                            <div data-key="83" class="key" data-note="D">
-                                <span class="hints">S</span>
-                            </div>
-                            <div data-key="69" class="key sharp" data-note="D#">
-                                <span class="hints">E</span>
-                            </div>
-                            <div data-key="68" class="key" data-note="E">
-                                <span class="hints">D</span>
-                            </div>
-                            <div data-key="70" class="key" data-note="F">
-                                <span class="hints">F</span>
-                            </div>
-                            <div data-key="84" class="key sharp" data-note="F#">
-                                <span class="hints">T</span>
-                            </div>
-                            <div data-key="71" class="key" data-note="G">
-                                <span class="hints">G</span>
-                            </div>
-                            <div data-key="89" class="key sharp" data-note="G#">
-                                <span class="hints">Y</span>
-                            </div>
-                            <div data-key="72" class="key" data-note="A">
-                                <span class="hints">H</span>
-                            </div>
-                            <div data-key="85" class="key sharp" data-note="Bb">
-                                <span class="hints">U</span>
-                            </div>
-                            <div data-key="74" class="key" data-note="B">
-                                <span class="hints">J</span>
-                            </div>
-                            <div data-key="75" class="key" data-note="C">
-                                <span class="hints">K</span>
-                            </div>
-                            <div data-key="79" class="key sharp" data-note="C#">
-                                <span class="hints">O</span>
-                            </div>
-                            <div data-key="76" class="key" data-note="D">
-                                <span class="hints">L</span>
-                            </div>
-                            <div data-key="80" class="key sharp" data-note="D#">
-                                <span class="hints">P</span>
-                            </div>
-                            <div data-key="186" class="key" data-note="E">
-                                <span class="hints">;</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-7 d-flex justify-content-center">
+                {% include 'piano.html' %}
             </div>
         </div>
     </div>
