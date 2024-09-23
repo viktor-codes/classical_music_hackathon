@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container highscore">
+    <h1 class="text-center mt-5">Top 10 High Scores</h1>
+    <div class="row d-flex justify-content-center mb-5">
+        <div class="col-5 mb-5">
+            <div class="score-list mt-5">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody id="scoreTableBody">
+                    </tbody>
+                </table>
+            </div>
+            <div class="text-center mt-4">
+                <a href="{% url 'challenge' %}" class="btn primary-btn my-5">Back to Game</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% block footertop %}<footer class="border-top">{% endblock footertop %}
+{% endblock content %}

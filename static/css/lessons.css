@@ -10,11 +10,17 @@ h1 {
     width: 100%;
     display: flex;
 }
+
 .lessons-piano-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.lesson-selector button {
+    background-color: var(--primary);
+    color: var(--background);
 }
 
 .sidebar {
@@ -23,9 +29,17 @@ h1 {
     left: 0;
     height: 100%;
     width: 80px;
-    /* background-color: #12171e; */
     padding: 0.4rem 0.8rem;
     transition: all 0.5s ease-in-out;
+}
+
+.sidebar ul {
+    margin-left: -4px;
+}
+
+.sidebar a {
+    width: 100%;
+    background-color: var(--primary);
 }
 
 .sidebar.active ~ .main-content {
@@ -35,6 +49,7 @@ h1 {
 
 .sidebar.active {
     width: 250px;
+    margin-left: -10px;
 }
 .sidebar-controller {
     height: 50px;
@@ -48,7 +63,7 @@ h1 {
 }
 
 .sidebar #hamburger-menu {
-    color: #fff;
+    color: var(--primary);
     font-size: 1.2rem;
     line-height: 50px;
     cursor: pointer;
@@ -68,16 +83,19 @@ h1 {
 }
 
 .sidebar ul li a{
-    color: #fff;
+    color: var(--background);
     display: flex;
     align-items: center;
     text-decoration: none;
-    border-radius: 0.8rem;
+    border: 2px solid transparent;
+    border-top-right-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
 }
 
 .sidebar ul li a:hover {
-    background-color: #fff;
-    color: #12171e;
+    background-color: var(--background);
+    border: 2px solid var(--primary);
+    color: var(--primary);
 }
 .sidebar ul li a i {
     min-width: 50px;
