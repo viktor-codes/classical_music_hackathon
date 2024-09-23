@@ -1,157 +1,179 @@
-// const keys = document.querySelectorAll(".key");
-const notes = Array.from(keys).map(key => key.getAttribute('data-note'));
-const startButton = document.getElementById('start-btn');
-const nextButton = document.getElementById('next-btn');
-const quitButton = document.getElementById('quit-btn');
-const homeButton = document.getElementById('home-btn');
-const playAgainButton = document.getElementById('play-again-btn');
-const resetButton = document.getElementById('reset-btn');
-const randomNoteElement = document.getElementById('random-note');
-const resultsScreen = document.getElementById('results-screen');
-const challengeProgress = document.getElementById('challenge-progress');
-const scoreElement = document.getElementById('score');
+document.addEventListener('DOMContentLoaded', function () {
+    const keys = document.querySelectorAll(".key");
+    const notes = Array.from(keys).map(key => key.getAttribute('data-note'));
+    const startButton = document.getElementById('start-btn');
+    const resetButton = document.getElementById('reset-btn');
+    const randomNoteElement = document.getElementById('random-note');
+    const scoreElement = document.getElementById('score');
+    const timerElement = document.getElementById('timer');
 
-let score = 0;
-let currentNote = '';
-let isStarted = false; // game state
-let isGamePaused = true;
+    let score = 0;
+    let currentNote = '';
+    let isStarted = false;
+    let isGamePaused = true;
+    let countdownTimer;
 
-// Event listeners
-document.addEventListener('DOMContentLoaded', function() {
+    loadScores();
+
+    // Event listeners
     startButton.addEventListener('click', startChallenge);
-    nextButton.addEventListener('click',handleNextButton);
     resetButton.addEventListener('click', restartChallenge);
-    quitButton.addEventListener('click', quitChallenge);
+    window.addEventListener('keydown', selectAnswer);
+    keys.forEach(key => {
+        key.addEventListener("click", selectAnswer);
+        key.addEventListener("transitionend", removeTransition);
+    });
+
+    function startChallenge() {
+        if (isStarted) return;
+
+        score = 0;
+        isStarted = true;
+        isGamePaused = false;
+        updateScore();
+        setNextNote();
+        startCountdown(3 * 60);
+    }
+
+    function startCountdown(seconds) {
+        let timeLeft = seconds;
+        timerElement.innerText = `Time Left: 03:00`;
+        countdownTimer = setInterval(() => {
+            if (timeLeft <= 0) {
+                clearInterval(countdownTimer);
+                endGame();
+            } else {
+                timeLeft--;
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
+                timerElement.innerText = `Time Left: ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            }
+        }, 1000);
+    }
+
+    function endGame() {
+        isGamePaused = true;
+        isStarted = false;
+        clearInterval(countdownTimer);
+        alert(`Game Over! Your final score is: ${score}`);
+        saveScore(); // Save score to local storage
+    }
+
+    function setNextNote() {
+        isGamePaused = false;
+        resetState();
+        currentNote = getRandomNote();
+        showNote();
+    }
+
+    function resetState() {
+        randomNoteElement.innerText = '';
+        clearKeyboard();
+    }
+
+    function showNote() {
+        randomNoteElement.innerText = currentNote;
+    }
+
+    function selectAnswer(e) {
+        if (isGamePaused) return;
+
+        let keyCode;
+        if (e.type === 'keydown') {
+            keyCode = e.keyCode;
+        } else if (e.type === 'click') {
+            keyCode = e.currentTarget.getAttribute("data-key");
+        }
+
+        const selectedKey = document.querySelector(`.key[data-key="${keyCode}"]`);
+        if (!selectedKey) return;
+
+        const userAnswer = selectedKey.getAttribute('data-note');
+        const correctKey = document.querySelector(`.key[data-note="${currentNote}"]`);
+
+        if (userAnswer === currentNote) {
+            highlightKey(selectedKey, 'correct');
+            score++;
+            updateScore();
+        } else {
+            highlightKey(selectedKey, 'incorrect');
+            highlightKey(correctKey, 'correct-blue');
+            score--;
+            updateScore();
+
+            isGamePaused = true;
+            setTimeout(() => {
+                handleNextButton();
+            }, 3000);
+            return;
+        }
+
+        isGamePaused = true;
+        setTimeout(handleNextButton, 1000);
+    }
+
+    function handleNextButton() {
+        if (!isGamePaused) return;
+        clearKeyboard();
+        setNextNote();
+    }
+
+    function clearKeyboard() {
+        document.querySelectorAll(".correct").forEach(key => key.classList.remove('correct'));
+        document.querySelectorAll(".incorrect").forEach(key => key.classList.remove('incorrect'));
+        document.querySelectorAll(".correct-blue").forEach(key => key.classList.remove('correct-blue'));
+    }
+
+    function restartChallenge() {
+        clearKeyboard();
+        score = 0;
+        updateScore();
+        setNextNote();
+        startCountdown(3 * 60);
+    }
+
+    function updateScore() {
+        scoreElement.innerHTML = `SCORE: ${score}`;
+    }
+
+    function removeTransition(e) {
+        if (e.propertyName !== 'transform') return;
+        e.target.classList.remove('correct', 'incorrect', 'correct-blue');
+    }
+
+    function getRandomNote() {
+        return notes[Math.floor(Math.random() * notes.length)];
+    }
+
+    function highlightKey(keyElement, status) {
+        keyElement.classList.add(status);
+    }
+
+    function saveScore() {
+        const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+        highScores.push(score);
+        highScores.sort((a, b) => b - a);
+        if (highScores.length > 10) {
+            highScores.pop();
+        }
+        localStorage.setItem('highScores', JSON.stringify(highScores));
+    }
+
+    function loadScores() {
+        const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+        console.log("Top 10 High Scores: ", highScores);
+    }
 });
 
-window.addEventListener('keydown', selectAnswer);
+function loadScores() {
+    const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+    const scoreTableBody = document.getElementById('scoreTableBody');
 
-keys.forEach(key => {
-    key.addEventListener("click", selectAnswer);
-    key.addEventListener("transitionend", removeTransition);
-});
-// Function to start new round
-function startChallenge() {
-    if (isStarted) {
-        return;
-    }
-
-    // Initialise round and score to 0 at the start of quiz
-    currentRound = 0;
-    score = 0;
-    setNextNote();
-    isStarted = true;
-    isGamePaused = false;
+    highScores.slice(0, 10).forEach((score, index) => {
+        const row = document.createElement('tr');
+        row.innerHTML = `<td>${index + 1}</td><td>${score}</td>`;
+        scoreTableBody.appendChild(row);
+    });
 }
 
-// Function to generate random note
-function getRandomNote() {
-    return notes[Math.floor(Math.random() * notes.length)];
-}
-
-function setNextNote() {
-    isGamePaused = false;
-    resetState();
-    currentNote = getRandomNote();
-    showNote(currentNote);
-    currentRound++;
-}
-
-function showNote(question) {
-    randomNoteElement.innerText = currentNote;
-}
-
-function resetState() {
-    randomNoteElement.innerText = '';
-}
-
-// Highlight the pressed key
-function highlightKey(key, className) {
-    key.classList.add(className);
-}
-
-// Handle key press
-function selectAnswer(e) {
-    if (isGamePaused) {
-        return;
-    }
-    let keyCode;
-
-    if (e.type === 'keydown') {
-        keyCode = e.keyCode;
-    } else if (e.type === 'click') {
-        keyCode = e.currentTarget.getAttribute("data-key");
-    }
-
-    const selectedKey = document.querySelector(`.key[data-key="${keyCode}"]`);
-    if (!selectedKey) return;
-    const userAnswer = selectedKey.getAttribute('data-note');
-    const correctKey = document.querySelector(`.key[data-note="${currentNote}"]`);
-
-    if (userAnswer === currentNote) {
-        highlightKey(selectedKey, 'correct');
-        score++;
-        updateScore();
-    } else {
-        highlightKey(selectedKey, 'incorrect');
-        highlightKey(correctKey, 'correct-blue');
-        score--;
-        updateScore();
-    }
-    isGamePaused = true;
-}
-
-function handleNextButton() {
-    if (!isGamePaused) {
-        return;
-    }
-    clearKeyboard();
-    // Increment round when next button is clicked
-    currentRound++;
-    setNextNote();
-}
-
-function checkScore() {
-    if (score < 0) {
-        alert('Your score has dropped below 0.\n Please Try again')
-        restartChallenge();
-    }
-}
-
-function updateScore() {
-    checkScore();
-    scoreElement.innerHTML = `SCORE: ${score}`
-}
-
-function clearKeyboard() {
-    var correctTags = document.querySelectorAll(".correct");
-    for(correctTag of correctTags) {
-        correctTag.classList.toggle('correct');
-    }
-    var incorrectTags = document.querySelectorAll(".incorrect");
-    for(incorrectTag of incorrectTags) {
-        incorrectTag.classList.toggle('incorrect');
-    }
-    var incorrectTags = document.querySelectorAll(".correct-blue");
-    for(incorrectTag of incorrectTags) {
-        incorrectTag.classList.toggle('correct-blue');
-    }
-    
-    
-}
-
-function restartChallenge() {
-    clearKeyboard()
-    // resultsScreen.classList.add('hide');
-    // Re-initialise round and score to 0 at the start of quiz
-    currentRound = 0;
-    score = 0;
-    updateScore();
-    setNextNote();
-}
-
-function quitChallenge() {
-    if (test = confirm("Are you sure you want to quit?")) {
-        window.location.href = 'https://8000-itjosephk2-classicalmus-b1uprnu6u5h.ws.codeinstitute-ide.net';
-    }
-}
+document.addEventListener('DOMContentLoaded', loadScores);

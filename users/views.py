@@ -11,6 +11,9 @@ def home(request):
 def team(request):
     return render(request, "team.html")
 
+def highscore(request):
+    return render(request, "highscores.html")
+
 
 class SignUpView(SuccessMessageMixin, CreateView):
     template_name = "users/register.html"

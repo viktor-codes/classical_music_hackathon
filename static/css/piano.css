@@ -40,7 +40,7 @@ h2 {
   min-height: 120px;
   font-size: 120px;
   line-height: 1;
-  color: #000;
+  color: var(--light-text);
   perspective: 100px;
   transition: all .07s ease;
 }
