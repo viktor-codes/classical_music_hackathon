@@ -37,11 +37,11 @@
     background: blue!important;
 }
 
-table {
+.table {
     border: 4px solid var(--background)!important;
     border-radius: 10px!important;
     overflow: hidden;
 }
-th, td {
+.th, td {
     background-color: var(--primary)!important;
 }

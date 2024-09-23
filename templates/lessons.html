@@ -10,35 +10,35 @@
           </div>
           <ul>
             <li>
-              <a href="#">
+              <a href="#h1">
                 <i class="fa-solid fa-school"></i>
                 <span class="lesson-item">Learn</span>
               </a>
               <span class="tooltip">Learn</span>
             </li>
 
-            <li>
+            <li class="disabled">
               <a href="#">
                 <i class="fa-solid fa-pen-to-square"></i>
                 <span class="lesson-item">Practice</span>
               </a>
-              <span class="tooltip">Practice</span>
+              <span class="tooltip">Coming Soon</span>
             </li>
 
             <li>
-              <a href="#">
-                <i class="fa-solid fa-trophy"></i>
-                <span class="lesson-item">Challenge</span>
-              </a>
-              <span class="tooltip">Challenge</span>
-            </li>
-
-            <li>
-              <a href="#">
+              <a href="#piano">
                 <i class="fa-solid fa-music"></i>
                 <span class="lesson-item">Play</span>
               </a>
               <span class="tooltip">Play</span>
+            </li>
+
+            <li>
+              <a href="{% url 'challenge' %}">
+                <i class="fa-solid fa-trophy"></i>
+                <span class="lesson-item">Game</span>
+              </a>
+              <span class="tooltip">Game</span>
             </li>
           </ul>
         </div>
@@ -77,52 +77,52 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>C</td>
-                    <td>C is on the left of the group of the two black keys</td>
+                    <td class="lesson-td">C</td>
+                    <td class="lesson-td">C is on the left of the group of the two black keys</td>
                   </tr>
                   <tr>
-                    <td>C♯ or D♭</td>
-                    <td></td>
+                    <td class="lesson-td">C♯ or D♭</td>
+                    <td class="lesson-td"></td>
                   </tr>
                   <tr>
-                    <td>D</td>
-                    <td>D is in the middle of the group of the two black keys</td>
+                    <td class="lesson-td">D</td>
+                    <td class="lesson-td">D is in the middle of the group of the two black keys</td>
                   </tr>
                   <tr>
-                    <td>D# or Eb</td>
-                    <td></td>
+                    <td class="lesson-td">D# or Eb</td>
+                    <td class="lesson-td"></td>
                   </tr>
                   <tr>
-                    <td>E</td>
-                    <td>E is on the right of the group of the two black keys</td>
+                    <td class="lesson-td">E</td>
+                    <td class="lesson-td">E is on the right of the group of the two black keys</td>
                   </tr>
                   <tr>
-                    <td>F</td>
-                    <td>F is on the left of the group of the three black keys</td>
+                    <td class="lesson-td">F</td>
+                    <td class="lesson-td">F is on the left of the group of the three black keys</td>
                   </tr>
                   <tr>
-                    <td>F# or Gb</td>
-                    <td></td>
+                    <td class="lesson-td">F# or Gb</td>
+                    <td class="lesson-td"></td>
                   </tr>
                   <tr>
-                    <td>G</td>
-                    <td>G is in the middle left of the group of the three black keys</td>
+                    <td class="lesson-td">G</td>
+                    <td class="lesson-td">G is in the middle left of the group of the three black keys</td>
                   </tr>
                   <tr>
-                    <td>G# or Ab</td>
-                    <td></td>
+                    <td class="lesson-td">G# or Ab</td>
+                    <td class="lesson-td"></td>
                   </tr>
                   <tr>
-                    <td>A</td>
-                    <td>A is in the middle right of the group of the three black keys</td>
+                    <td class="lesson-td">A</td>
+                    <td class="lesson-td">A is in the middle right of the group of the three black keys</td>
                   </tr>
                   <tr>
-                    <td>A# or Bb</td>
-                    <td></td>
+                    <td class="lesson-td">A# or Bb</td>
+                    <td class="lesson-td"></td>
                   </tr>
                   <tr>
-                    <td>B</td>
-                    <td>B is on the right of the group of the three black keys</td>
+                    <td class="lesson-td">B</td>
+                    <td class="lesson-td">B is on the right of the group of the three black keys</td>
                   </tr>
                 </tbody>
               </table>
@@ -141,8 +141,11 @@
             <h1>Lesson 3: Chords</h1>
             <img src="{% static 'images/chords.webp' %}" class="mt-5" alt="piano chords" width="800" height="300">
         </div>
-        {% include 'piano.html' %}
+        <div id="piano">
+          {% include 'piano.html' %}
+        </div>
       </div>
     </div>
 
+{% block footertop %}<footer class="border-top">{% endblock footertop %}
 {% endblock %}
