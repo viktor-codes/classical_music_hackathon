@@ -24,12 +24,11 @@ h1 {
 }
 
 .sidebar {
-    position : relative;
-    top: 0;
+    position: fixed;
+    top: 98px;
     left: 0;
     height: 100%;
     width: 80px;
-    padding: 0.4rem 0.8rem;
     transition: all 0.5s ease-in-out;
 }
 
@@ -176,4 +175,49 @@ h1 {
 
 .lesson-td {
     background-color: #fff!important;
+}
+.scale-notation-box {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    flex-direction: column;
+}
+
+.scale {
+    margin: 0!important;
+}
+
+.lesson-text {
+    margin: 20px 0;
+}
+
+.lesson-sub-heading {
+    font-size: 32px;
+    text-transform: uppercase;
+    line-height: 1.5rem;
+    letter-spacing: .3rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.navbar {
+	position: fixed;
+	width: 100%;
+	top: 20px;
+}
+.main {
+	position: absolute;
+	top: 122px;
+}
+.lesson-main {
+    position: relative;
+    top: 122px;
+    margin-bottom: 150px;
+}
+.chord-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

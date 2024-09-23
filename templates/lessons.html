@@ -16,33 +16,33 @@
 							<span class="tooltip">Learn</span>
 						</li>
 
-						<li class="disabled">
-              <a href="#">
-                <i class="fa-solid fa-pen-to-square"></i>
-                <span class="lesson-item">Practice</span>
-              </a>
-              <span class="tooltip">Coming Soon</span>
-            </li>
+						<li class="">
+						<a href="#study">
+							<i class="fa-solid fa-pen-to-square"></i>
+							<span class="lesson-item">Practice</span>
+						</a>
+						<span class="tooltip">Study</span>
+						</li>
 
 						<li>
-              <a href="#piano">
-                <i class="fa-solid fa-music"></i>
-                <span class="lesson-item">Play</span>
-              </a>
-              <span class="tooltip">Play</span>
-            </li>
+						<a href="#piano">
+							<i class="fa-solid fa-music"></i>
+							<span class="lesson-item">Play</span>
+						</a>
+						<span class="tooltip">Play</span>
+						</li>
 
-            <li>
-              <a href="{% url 'challenge' %}">
-                <i class="fa-solid fa-trophy"></i>
-                <span class="lesson-item">Game</span>
-              </a>
-              <span class="tooltip">Game</span>
-            </li>
-					</ul>
+						<li>
+						<a href="{% url 'challenge' %}">
+							<i class="fa-solid fa-trophy"></i>
+							<span class="lesson-item">Game</span>
+						</a>
+						<span class="tooltip">Game</span>
+						</li>
+								</ul>
 				</div>
 			</div>
-			<div class="col-8 mt-5">
+			<div class="col-8 mt-5 lesson-main">
 				<div class="lesson-selector mb-5 text-center">
 					<button class="lesson-tab active fw-bold" data-lesson="1">
 						Lesson 1
@@ -64,17 +64,16 @@
 								left of G, so it can be called Gb too. This means that there are
 								two possible names for all the black notes.
 							</p>
-							<p class="mt-3 text-dark">
+							<p class="mt-3 lead text-dark">
 								These 12 notes just repeat over and over again on the keyboard.
-								If you’re new to the piano, here is a quick way to remember
-								where notes are:
+								Try studying the notes below and practice playing them on the piano.
 							</p>
 						</div>
 					</div>
 
 					<div class="container mt-5">
 						<!-- Table wrapper with shadow and rounded corners -->
-						<div class="table-responsive bg-light p-4 rounded shadow">
+						<div id="study" class="table-responsive bg-light p-4 rounded shadow">
 							<table class="table table-bordered">
 								<thead class="thead-dark">
 									<tr>
@@ -85,65 +84,77 @@
 								<tbody>
 									<tr>
 										<td class="lesson-td">C</td>
-										<td class="lesson-td">C is on the left of the group of the two black keys</td>
+										<td class="lesson-td">This is the white on the left of the group of the two black keys</td>
+										<td><img src="https://imgur.com/OeVsj5G.png" alt="C on a stave"></td>
 									</tr>
 									<tr>
 										<td class="lesson-td">C♯ or D♭</td>
-										<td class="lesson-td"></td>
+										<td class="lesson-td">This is the black note inbetween C and D</td>
+										<td><img src="https://imgur.com/TWrAhsw.png" alt="C# on a stave"></td>
 									</tr>
 									<tr>
 										<td class="lesson-td">D</td>
 										<td class="lesson-td">
-											D is in the middle of the group of the two black keys
+											This is the white in the middle of the group of the two black keys
 										</td>
+										<td><img src="https://imgur.com/OsLHgsp.png" alt="D on a stave"></td>
 									</tr>
 									<tr>
 										<td class="lesson-td">D# or Eb</td>
-										<td class="lesson-td"></td>
+										<td class="lesson-td">This is the Black note inbetween D and E</td>
+										<td><img src="https://imgur.com/pYTosiU.png" alt="D# on a stave"></td>
 									</tr>
 									<tr>
 										<td class="lesson-td">E</td>
 										<td class="lesson-td">
-											E is on the right of the group of the two black keys
+											This is the white on the right of the group of the two black keys
 										</td>
+										<td><img src="https://imgur.com/A3Paaqf.png" alt="E on a stave"></td>
 									</tr>
 									<tr>
 										<td class="lesson-td">F</td>
 										<td class="lesson-td">
-											F is on the left of the group of the three black keys
+											This is the white on the left of the group of the three black keys
 										</td>
+										<td><img src="https://imgur.com/VU6uABa.png" alt="F on a stave"></td>
 									</tr>
 									<tr>
 										<td class="lesson-td">F# or Gb</td>
-										<td class="lesson-td"></td>
+										<td class="lesson-td">This is the black note inbetween F and G</td>
+										<td><img src="https://imgur.com/G0DR2np.png" alt="F# on a stave"></td>
 									</tr>
 									<tr>
 										<td class="lesson-td">G</td>
 										<td class="lesson-td">
-											G is in the middle left of the group of the three black
+											This is the white note is in the middle left of the group of the three black
 											keys
 										</td>
+										<td><img src="https://imgur.com/Oq4Oke8.png" alt="G on a stave"></td>
 									</tr>
 									<tr>
 										<td class="lesson-td">G# or Ab</td>
-										<td class="lesson-td"></td>
+										<td class="lesson-td">This is the black note inbetween G and A</td>
+										<td><img src="https://imgur.com/NWa1MZ1.png" alt="G# on a stave"></td>
 									</tr>
 									<tr>
 										<td class="lesson-td">A</td>
 										<td class="lesson-td">
-											A is in the middle right of the group of the three black
+											This is the white note in the middle right of the group of the three black
 											keys
 										</td>
+										<td><img src="https://imgur.com/DANxLoH.png" alt="A on a stave"></td>
 									</tr>
 									<tr>
 										<td class="lesson-td">A# or Bb</td>
-										<td class="lesson-td"></td>
+										<td class="lesson-td">This is the black note inbetween A and B</td>
+										<td><img src="https://imgur.com/mtw9SBa.png" alt="Bb on a stave"></td>
 									</tr>
 									<tr>
 										<td class="lesson-td">B</td>
 										<td class="lesson-td">
-											B is on the right of the group of the three black keys
+											Thi is the white is on the right of the group of the three black keys
 										</td>
+										<td><img src="https://imgur.com/VDQuvTo.png" alt="B on a stave"></td>
 									</tr>
 								</tbody>
 							</table>
@@ -155,7 +166,7 @@
 					<div class="container mt-5">
 						<h1 class="text-center mb-4">Lesson 2: Scales</h1>
 						<div class="p-5 bg-light shadow rounded">
-							<p class="lead text-dark">
+							<p class="lead text-dark lesson-text">
 								Scales are often a piano student’s first step in learning how to
 								play to the piano. While practicing scales can seem to be a
 								tedious, routine exercise, scales provide the fundamentals for
@@ -167,22 +178,71 @@
 								tone scales.
 							</p>
 						</div>
+						<div class="container scale-notation-box p-5 rounded" id="study">
+							<h2 class="lead text-dark lesson-sub-heading">Major Scale</h2>
+							<p class="lead text-dark lesson-text">
+								Below we have a scale in C major. All major scales are layed out the same way. We have a breaksown of a tone followed by a tone then followed by a semitone then 3 more tones and a semTone and finally a tone. Major scales are made up of intervals in this order tone tone semitone, tone tone tone, seimtone. You may be asking whatis a tone and what is a semi tone. To picture what this means on a keyboard everytime you step up a note you step a semi tone. E.G. C - C# is a semitone likewise E - F is a semitone. A tone or whole tone as it is commonly reffered to is a step of two semitones. E.G of this is A - B or F# - G#. With this system you can play a major scale starting on any note. Click the play button and try this out for yourself. Come back to continue the course when you get it.
+							</p>
+							<img class="me-3 scale" src="https://upload.wikimedia.org/score/1/n/1nd2lidxg20ikt80gxhzffyc8o259nz/1nd2lidx.png" style="background: #fff" alt="Note Image">
+							<p class="lead text-dark lesson-text">
+								As you played through some scales di you notice anything about the sound of the scales. Each scale has its own characteristic. As you can tell the sequence of intevals being whole tones and semi tones is the same for all major scales. So no matter where you start it all major scales sound very similar to eachother. Try and keep this sound in mind as you move onto the next section about minor scales and well compare the two to see if you notice the difference or even better can hear the difference.  
+							</p>
+						</div>
+						<div class="container scale-notation-box p-5 rounded">
+							<h2 class="lead text-dark lesson-sub-heading">Minor Scale</h2>
+							<p class="lead text-dark lesson-text">
+								Below we have a scale in C harmonic minor. There is actually 3 minor scales. We will just focus on the harmonic minor for now and we will get into the details of the minor key in later lessons. Harmonic minor scales are made up of intervals in this order tone semitone, tone tone semitone, tone and a helf, seimtone. If you guessed that tone and a half meant three semitones then yes you would be correct. An example of thiws would be C - Eb or A - C. Click the play button and try this out for yourself. Come back to continue the course when you get it.
+							</p>
+							<img class="me-3 scale" src="https://upload.wikimedia.org/score/g/9/g9vemrj67utc3im6yrk5v6esrpdh9g4/g9vemrj6.png" style="background: #fff" alt="Note Image">
+							<p class="lead text-dark lesson-text">
+								Did you notice the difference in sound between the minor scales and the major scales. If not do not worry either have another play around with them or it will com e apparent as we develop your knowledge throuhgout the course. The sound of the the tomne and a half or the minor third as it is also commonly known as is a very distinct sound that gives the harmonic minor its unique sound. It will also become a defining charecteristic of the diminshed chords in future lessons. 
+							</p>
+							
+						</div>
+						<div class="container scale-notation-box p-5 rounded">
+							<h2 class="lead text-dark lesson-sub-heading">Wrap Up</h2>
+							<p class="lead text-dark lesson-text">
+								There is plenty of more scales to discover but for now I think is plenty to digest and as more details of wetern classical music get explored it will make more sense to stud these scales. Continue to play with these scales and when you are ready you can move on to lesson 3 which is all about chords. 
+							</p>
+						</div>
+						
 					</div>
 				</div>
         
-        <div class="lesson-content d-none" id="lesson-3">
-            <h1 class="text-center mb-4">Lesson 3: Chords</h1>
-					<img
-						src="{% static 'images/chords.webp' %}"
-						class="mt-5 rounded shadow"
-						alt="piano chords"
-						width="800"
-						height="300"
-					/>
+				<div class="lesson-content d-none" id="lesson-3">
+					<h1 class="text-center mb-4">Lesson 3: Chords</h1>
+					<div class="p-5 bg-light shadow rounded">
+						<p class="lead text-dark lesson-text">
+							Chord are made up of two or more Intervals. An interval is the distance between two notes. Building of of the last lesson on scales we can simply look at an interval as how many semitones are there inbetween the two notes. There is better and more practical ways of describing these intervals just like the minor third we explained earlier however we will need to lay the foundation of kys and intervals in this mnner in later lesson. Our aim in this first module is to get you playing and having fun as soon as possible. 
+						</p>
+					</div>
+					<div class="container scale-notation-box p-5 rounded" id="study">
+						<h2 class="lead text-dark lesson-sub-heading">Recognising Patterns in Chords</h2>
+						<p class="lead text-dark lesson-text"></p>
+							Below is a diagram of many different types of chrds. Lots of which will make no sense to you right now. However, if you would like to get playing piano you might want to explore these chords in tandem with lesson 1 and just figure what the notes are the use lesson three to figure out wether the distance is. Tone a semitone or a tone and a half and if not how many semitones. I would reccomend starting with moajor chords and se if you can spot a pattern with how they are made up. moving onto minor scales as an extra chalenge. The next section of chords would be very dificult to understand and play right nw but by all means please explore them if you feel so inclined. 
+						</p>
+					</div>
+					<div class="chord-image">
+						<img
+							src="{% static 'images/chords.webp' %}"
+							class="mt-5 rounded shadow"
+							alt="piano chords"
+							width="800"
+							height="300"
+							syle="object-align: center"
+						/>
+					</div>
+					<div class="container scale-notation-box p-5 rounded" id="study">
+						<h2 class="lead text-dark lesson-sub-heading">Wrap Up</h2>
+						<p class="lead text-dark lesson-text"></p>
+							Try taking everything you have learned into the challenge section of this site and see if you fluently find the notes on the keyboard that appear. Being able to do this well will send you on a fast track way to learniing the piano =much easier in the future.
+						</p>
+					</div>
 				</div>
-        <div id="piano">
-          {% include 'piano.html' %}
-        </div>
+				<div id="piano">
+				{% include 'piano.html' %}
+				</div>
+			</div>
 		</div>
 	</section>
 </div>
