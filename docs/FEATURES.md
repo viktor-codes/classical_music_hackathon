@@ -33,9 +33,11 @@ On smaller screens, the navbar collapses into a toggle with side menu that slide
 Footer contains a copyright text, piano icon that redirects to the home page when clicked, and links to the lessons, game, and team pages, as well as highscores page when logged in.
 
 ## Home page
-![home page screenshot](./readme-images/homepage-screenshot.png)
+![home page screenshot 1](./readme-images/homepage-screenshot1.png)
+![home page screenshot 2](./readme-images/homepage-screenshot2.png)
+![home page screenshot 3](./readme-images/homepage-screenshot3.png)
 
-The home page displays the hero section with the description of the website's purpose and an image of a colourful piano.
+The home page displays the hero section with the description of the website's description, purpose, and features.
 
 ## Lessons page
 ![lessons page screenshot](./readme-images/lessons-page.png)
