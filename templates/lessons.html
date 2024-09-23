@@ -16,29 +16,29 @@
 							<span class="tooltip">Learn</span>
 						</li>
 
-						<li>
-							<a href="#">
-								<i class="fa-solid fa-pen-to-square"></i>
-								<span class="lesson-item">Practice</span>
-							</a>
-							<span class="tooltip">Practice</span>
-						</li>
+						<li class="disabled">
+              <a href="#">
+                <i class="fa-solid fa-pen-to-square"></i>
+                <span class="lesson-item">Practice</span>
+              </a>
+              <span class="tooltip">Coming Soon</span>
+            </li>
 
 						<li>
-							<a href="#">
-								<i class="fa-solid fa-trophy"></i>
-								<span class="lesson-item">Challenge</span>
-							</a>
-							<span class="tooltip">Challenge</span>
-						</li>
+              <a href="#piano">
+                <i class="fa-solid fa-music"></i>
+                <span class="lesson-item">Play</span>
+              </a>
+              <span class="tooltip">Play</span>
+            </li>
 
-						<li>
-							<a href="#">
-								<i class="fa-solid fa-music"></i>
-								<span class="lesson-item">Play</span>
-							</a>
-							<span class="tooltip">Play</span>
-						</li>
+            <li>
+              <a href="{% url 'challenge' %}">
+                <i class="fa-solid fa-trophy"></i>
+                <span class="lesson-item">Game</span>
+              </a>
+              <span class="tooltip">Game</span>
+            </li>
 					</ul>
 				</div>
 			</div>
@@ -169,10 +169,81 @@
 						</div>
 					</div>
 				</div>
-
 				<div class="lesson-content d-none" id="lesson-3">
           <div class="container mt-5">
-					<h1 class="text-center mb-4">Lesson 3: Chords</h1>
+            <!-- Table wrapper with shadow and rounded corners -->
+            <div class="table-responsive bg-light p-4 rounded shadow">
+              <table class="table table-bordered">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Notes</th>
+                    <th scope="col">Keyboard Position</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="lesson-td">C</td>
+                    <td class="lesson-td">C is on the left of the group of the two black keys</td>
+                  </tr>
+                  <tr>
+                    <td class="lesson-td">C♯ or D♭</td>
+                    <td class="lesson-td"></td>
+                  </tr>
+                  <tr>
+                    <td class="lesson-td">D</td>
+                    <td class="lesson-td">D is in the middle of the group of the two black keys</td>
+                  </tr>
+                  <tr>
+                    <td class="lesson-td">D# or Eb</td>
+                    <td class="lesson-td"></td>
+                  </tr>
+                  <tr>
+                    <td class="lesson-td">E</td>
+                    <td class="lesson-td">E is on the right of the group of the two black keys</td>
+                  </tr>
+                  <tr>
+                    <td class="lesson-td">F</td>
+                    <td class="lesson-td">F is on the left of the group of the three black keys</td>
+                  </tr>
+                  <tr>
+                    <td class="lesson-td">F# or Gb</td>
+                    <td class="lesson-td"></td>
+                  </tr>
+                  <tr>
+                    <td class="lesson-td">G</td>
+                    <td class="lesson-td">G is in the middle left of the group of the three black keys</td>
+                  </tr>
+                  <tr>
+                    <td class="lesson-td">G# or Ab</td>
+                    <td class="lesson-td"></td>
+                  </tr>
+                  <tr>
+                    <td class="lesson-td">A</td>
+                    <td class="lesson-td">A is in the middle right of the group of the three black keys</td>
+                  </tr>
+                  <tr>
+                    <td class="lesson-td">A# or Bb</td>
+                    <td class="lesson-td"></td>
+                  </tr>
+                  <tr>
+                    <td class="lesson-td">B</td>
+                    <td class="lesson-td">B is on the right of the group of the three black keys</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          
+            
+        </div>
+        
+        <div class="lesson-content d-none" id="lesson-2">
+            <h1>Lesson 2: Scales</h1>
+            <p class="mt-5">Scales are often a piano student’s first step in learning how to play to the piano. While practicing scales can seem to be a tedious, routine exercise, scales provide the fundamentals for understanding music and mastering piano techniques.In general, it's a good idea to start with the major scales first, then move on to the natural minor, harmonic minor, and melodic minor scales. Once you master those you can move onto things like chromatic scales, ​blues scales, pentatonic scales and whole tone scales.</p>
+        </div>
+        
+        <div class="lesson-content d-none" id="lesson-3">
+            <h1 class="text-center mb-4">Lesson 3: Chords</h1>
 					<img
 						src="{% static 'images/chords.webp' %}"
 						class="mt-5 rounded shadow"
@@ -181,11 +252,12 @@
 						height="300"
 					/>
 				</div>
-      </div>
-				{% include 'piano.html' %}
-			</div>
+        <div id="piano">
+          {% include 'piano.html' %}
+        </div>
 		</div>
-
-		{% endblock %}
 	</section>
 </div>
+  
+{% block footertop %}<footer class="border-top">{% endblock footertop %}
+{% endblock %}
