@@ -23,28 +23,28 @@ function playNoteFromKey(e) {
 
   const keyNote = key.getAttribute("data-note");
   key.classList.add("playing");
-//   note.innerHTML = keyNote;
+  note.textContent = keyNote;
   audio.currentTime = 0;
   audio.play();
 
   const images = {
-    "65": "../static/images/notes/c-1.png",
-    "87": "{% static 'images/notes/c-1.png' %}", 
-    "83": "images/notes/d-1.png",
-    "69": "images/notes/d-sharp-1.png",
-    "68": "images/notes/e-1.png",
-    "70": "images/notes/f-1.png",
-    "84": "images/notes/f-sharp-1.png",
-    "71": "images/notes/g-1.png",
-    "89": "images/notes/g-sharp-1.png",
-    "72": "images/notes/a-1.png",
-    "85": "images/notes/b-1.png",
-    "74": "images/notes/b-flat-1.png",
-    "75": "images/notes/c-2.png",
-    "79": "images/notes/c-sharp-2.png",
-    "76": "images/notes/d-2.png",
-    "80": "images/notes/d-sharp-2.png",
-    "186": "images/notes/e-2.png"
+    "65": "https://imgur.com/OeVsj5G.png",
+    "87": "https://imgur.com/TWrAhsw.png", 
+    "83": "https://imgur.com/OsLHgsp.png",
+    "69": "https://imgur.com/pYTosiU.png",
+    "68": "https://imgur.com/A3Paaqf.png",
+    "70": "https://imgur.com/VU6uABa.png",
+    "84": "https://imgur.com/G0DR2np.png",
+    "71": "https://imgur.com/Oq4Oke8.png",
+    "89": "https://imgur.com/NWa1MZ1.png",
+    "72": "https://imgur.com/DANxLoH.png",
+    "85": "https://imgur.com/VDQuvTo.png",
+    "74": "https://imgur.com/mtw9SBa.png",
+    "75": "https://imgur.com/0nLDFXT.png",
+    "79": "https://imgur.com/nHdARtx.png",
+    "76": "https://imgur.com/Bvo56ti.png",
+    "80": "https://imgur.com/QpZ23jn.png",
+    "186": "https://imgur.com/Uy22mMI.png"
   };
 
   // Update the image source based on the key pressed
