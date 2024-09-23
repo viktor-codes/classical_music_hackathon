@@ -4,7 +4,7 @@
 
 ![Rythm Ready logo](./readme-images/rythm-ready-logo.png)
 
-Rhythm Ready is a learning app to teach beginners how to play notes on a piano. Users of this application can partake in a lesson and then test their knowledge with a fun infinite challenge so players can practice their skills.
+Rhythm Ready is a learning app to teach beginners how to play notes, scales and chords on a piano. Users of this application can partake in lessons and then test their knowledge with a fun game so players can practice their skills.
 
 ---
 
@@ -32,7 +32,7 @@ This learning application is intended for:
 
 * Users that have a keen interest in music.
 * Users that would like to learn how to play piano.
-* Users that wish to test their newfound knowledge against a challenge.  
+* Users that wish to test their newfound knowledge against a game.  
 
 ## User Stories
 
@@ -50,15 +50,19 @@ This learning application is intended for:
 ## Wireframes 
 ### Home
 <img src="readme-images/home-page.png">
+<img src="readme-images/home-mobile.png">
 
 ### Lessons 
 <img src="readme-images/lessons.png">
+<img src="readme-images/lessons-mobile.png">
 
 ### Challenge
 <img src="readme-images/challenge.png">
+<img src="readme-images/challenge-mobile.png">
 
 ### Team
 <img src="readme-images/team.png">
+<img src="readme-images/team-mobile.png">
 
 ## Design
 
