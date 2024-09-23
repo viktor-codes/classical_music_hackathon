@@ -1,142 +1,147 @@
 :root {
-    --background: #333333;
-    --primary: #D4AF37;
-    --light-text: #F7F7F7;
+	--background: #333333;
+	--primary: #d4af37;
+	--light-text: #f7f7f7;
 }
 
 body {
-    background-color: var(--background);
+	background-color: var(--background);
 }
 
-nav, .about {
-    background-color: var(--primary);
-    background-image: url("../images/gold.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    box-shadow: 0 5px 10px var(--primary);
+nav,
+.about {
+	background-color: var(--primary);
+	background-image: url('../images/gold.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-shadow: 0 5px 10px var(--primary);
 }
 
 .link-underline {
-    border-bottom: 4px solid transparent;
+	border-bottom: 4px solid transparent;
 }
 
 .link-underline:hover {
-    border-bottom: 4px solid var(--background);
+	border-bottom: 4px solid var(--background);
 }
 
 .badge {
-    background-color: var(--background);
-    color: var(--primary);
-    border: 3px solid var(--background);
+	background-color: var(--background);
+	color: var(--primary);
+	border: 3px solid var(--background);
 }
 
 .badge:hover {
-    background-color: var(--primary)!important;
-    color: var(--background);
-    border: 3px solid var(--background);
+	background-color: var(--primary) !important;
+	color: var(--background);
+	border: 3px solid var(--background);
 }
 
 .drop-menu {
-    background-color: var(--background);
-    border: 2px solid var(--primary)!important;
-    margin-left: -90px;
+	background-color: var(--background);
+	border: 2px solid var(--primary) !important;
+	margin-left: -90px;
 }
 
-.drop-menu-item, .name {
-    color: var(--primary);
+.drop-menu-item,
+.name {
+	color: var(--primary);
 }
-  
+
 .dropdown-item:hover {
-    background-color: transparent;
-    color: var(--light-text);
+	background-color: transparent;
+	color: var(--light-text);
 }
-  
+
 .dropdown-item:hover a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 .link-nav {
-    color: #000;
+	color: #000;
 }
 
 .offcanvas {
-    background-color: var(--background);
-    color: var(--primary);
-    border: 2px solid var(--primary)!important;
+	background-color: var(--background);
+	color: var(--primary);
+	border: 2px solid var(--primary) !important;
 }
 
 .btn-close {
-    background-color: var(--primary);
-    border: 2px solid transparent;
-    opacity: 1;
+	background-color: var(--primary);
+	border: 2px solid transparent;
+	opacity: 1;
 }
 
 .btn-close:hover {
-    background-color: var(--background);
-    border: 2px solid var(--primary);
+	background-color: var(--background);
+	border: 2px solid var(--primary);
 }
 
-h1, .lead{
-    color: var(--light-text);
+h1,
+.lead {
+	color: var(--light-text);
 }
 
 .primary-btn {
-    background-color: var(--background);
-    border: 3px solid var(--primary);
-    color: var(--primary);
-    transition: 0.3s ease-in-out;
+	background-color: var(--background);
+	border: 3px solid var(--primary);
+	color: var(--primary);
+	transition: 0.3s ease-in-out;
 }
 
 .primary-btn:hover {
-    background-color: var(--primary);
-    border: 3px solid var(--background);
-    color: var(--background);
+	background-color: var(--primary);
+	border: 3px solid var(--background);
+	color: var(--background);
 }
 
 .primary-fill-btn {
-    background-color: var(--primary);
-    border: 3px solid var(--background);
-    color: #000;
-    transition: 0.3s ease-in-out;
+	background-color: var(--primary);
+	border: 3px solid var(--background);
+	color: #000;
+	transition: 0.3s ease-in-out;
 }
 
 .primary-fill-btn:hover {
-    background-color: var(--background);
-    border: 3px solid var(--primary);
-    color: var(--primary);
+	background-color: var(--background);
+	border: 3px solid var(--primary);
+	color: var(--primary);
 }
 
 .footer-img {
-    font-size: 3rem;
+	font-size: 3rem;
 }
 
 .about {
-    box-shadow: none;
+	box-shadow: none;
 }
 
 .hide {
-    display: none;
+	display: none;
 }
-  
+
 .login {
-    margin-bottom: 128px;
+	margin-bottom: 128px;
 }
 
-form label, form li, form small {
-    color: var(--light-text)!important;
+form label,
+form li,
+form small {
+	color: var(--light-text) !important;
 }
 
-form li, form small {
-    opacity: 0.7;
+form li,
+form small {
+	opacity: 0.7;
 }
 
+@media screen and (max-width: 991px) {
+	.link-nav {
+		color: var(--primary);
+	}
 
-@media screen and (max-width: 991px) { 
-    .link-nav {
-        color: var(--primary);
-    }
-
-    .link-nav:hover {
-        color: var(--light-text);
-    }
+	.link-nav:hover {
+		color: var(--light-text);
+	}
 }
