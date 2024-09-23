@@ -122,6 +122,10 @@ h1, .lead{
     margin-bottom: 128px;
 }
 
+.highscore {
+    margin-bottom: 150px;
+}
+
 form label, form li, form small {
     color: var(--light-text)!important;
 }

@@ -1,13 +1,3 @@
-.button-box {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 500px;
-    margin: auto;
-    margin-top: 50px;
-}
-
 .keyboard-holder {
     display: flex;
     flex-direction: column;
@@ -45,4 +35,13 @@
 }
 .correct-blue {
     background: blue!important;
+}
+
+table {
+    border: 4px solid var(--background)!important;
+    border-radius: 10px!important;
+    overflow: hidden;
+}
+th, td {
+    background-color: var(--primary)!important;
 }
