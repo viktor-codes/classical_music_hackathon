@@ -1,7 +1,28 @@
 # Classical Music Hackathon
+
 # Rhythm Ready
 
-Rhythm Ready is a learning app to teach beginners how to play notes on a piano. Users of this application can partake in a lesson and then test their knowledge with a fun infinite challenge so players can practice their skills.  
+![Rythm Ready logo](./readme-images/rythm-ready-logo.png)
+
+Rhythm Ready is a learning app to teach beginners how to play notes, scales and chords on a piano. Users of this application can partake in lessons and then test their knowledge with a fun game so players can practice their skills.
+
+---
+
+# Table of content
+
+-   [User Experience Design](#user-experience-design)
+    - [User Demographic](#user-demographic)
+    - [User Stories](#user-stories)
+-   [Wireframes](#wireframes)
+-   [Design](#design)
+-   [Technologies Used](#technologies-used)
+-   [Agile](#agile)
+-   [Features](#features)
+-   [Testing](#testing)
+-   [Deployment](#testing)
+-   [Acknowledgements](#acknowledgements)
+
+---
 
 # User Experience Design
 
@@ -11,7 +32,7 @@ This learning application is intended for:
 
 * Users that have a keen interest in music.
 * Users that would like to learn how to play piano.
-* Users that wish to test their newfound knowledge against a challenge.  
+* Users that wish to test their newfound knowledge against a game.  
 
 ## User Stories
 
@@ -29,15 +50,19 @@ This learning application is intended for:
 ## Wireframes 
 ### Home
 <img src="readme-images/home-page.png">
+<img src="readme-images/home-mobile.png">
 
 ### Lessons 
 <img src="readme-images/lessons.png">
+<img src="readme-images/lessons-mobile.png">
 
 ### Challenge
 <img src="readme-images/challenge.png">
+<img src="readme-images/challenge-mobile.png">
 
 ### Team
 <img src="readme-images/team.png">
+<img src="readme-images/team-mobile.png">
 
 ## Design
 
@@ -47,7 +72,7 @@ The objective of this project was to design a learning application that is easy 
 
 The colour palette for this learning application was chosen as it represented classical music, it has a richness and classical aesthetic associated with it.   
 
-<img src="readme-images/coolors-rhythm-ready.png">
+![colour palette](./readme-images/colour-palette.png)
 
 # Technologies used
 * <b>JavaScript</b> - Custom JavaScript was used in the development of this application.
@@ -67,101 +92,11 @@ Agile planning methodology was used to create Rhythm Ready. GitHub projects was 
 
 # Features
 
-## Pages
-
-The website has the following pages:
-
-- Home page
-
-- Lessons page
-
-- Challenges page
-
-- Team page
-
-- Log in page
-
-- Sign up page
-
-### Navbar
-
-[Navbar screenshot]
-
-Navbar has the following links:
-
-- Rythm Ready logo (links to home page)
-
-- Lessons page
-
-- Challenges page
-
-- Team page
-
-- Log in
-
-- Sign up
-
-On smaller screens, the navbar collapses into a toggle with side menu that slides from the left when clicked
-
-[Navbar side menu screenshot]
-
-### Footer
-
-[Footer screenshot]
-
-Footer contains a copyright text, piano icon that redirects to the home page when clicked, and links to the lessons and team pages.
-
-### Home page
-
-[home page screenshot]
-
-The home page displays the hero section with the description of the website's purpose and an image of a colourful piano.
-
-### Lessons page
-
-[lessons page screenshot]
-
-The lessons page contains three lessons under toggle tabs. Lesson 1 is about the musical alphabet, lesson 2 on basic scales, and lesson 3 on chords. It also contains a playable piano that you can click using your mouse or press the corresponding key.
-
-### Challenges page
-
-[challenges page screenshot]
-
-The challenges page allows users to practice the notes they have learned. The start button starts a timer and displays a random note on the screen and the users will have to click or press the correct key on the piano. They get one score for every correct answer and minus one for every wrong answer. Their current score is displayed. It also has restart button to start a new challenge, as well as quit button to stop the current challenge.
-
-### Team page
-
-[team page screenshot]
-
-This page contains links to the GitHub/LinkedIn profiles of the contributors of this project.
-  
-### Log in page
-
-[Log in page screenshot]
-
-The login page dispays the login form. An error message pops up if the username and password are not filled in and the sign in button is pressed.
-
-### Log out page
-
-[Log out page screenshot]
-
-Description:
-
-### Sign up page
-
-[Sign up page screenshot]
-
-This page shows the form for signing up. An error message pops up if the input is invalid or missing.
-
-## Future Features 
-
-* It would be nice to have a user profile area that saves the users current gameplay score  and a graph that tracks this over time so they can visualise their progress. 
-* More lessons could be added for inclusion of different user levels. 
-* The ability to show the user piano notes for a song and have the user follow along on the digital piano would be advantageous. 
-* More challenges could be added to allow the user to test new skills.
+Please refer to the [FEATURES.md](./FEATURES.md) file for all features-related documentation.
 
 # Testing
-A detailed overview of the testing process is available [here.](https://github.com/viktor-codes/classical_music_hackathon/blob/main/docs/TESTING.md)
+
+Please refer to the [TESTING.md](./TESTING.md) file for all test-related documentation.
 
 # Deployment 
 

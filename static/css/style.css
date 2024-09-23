@@ -126,11 +126,13 @@ h1,
 }
 
 .highscore {
-    margin-bottom: 150px;
+	margin-bottom: 150px;
 }
 
-form label, form li, form small {
-    color: var(--light-text)!important;
+form label,
+form li,
+form small {
+	color: var(--light-text) !important;
 }
 
 form li,
@@ -148,4 +150,6 @@ form small {
 	}
 }
 
-
+.footer {
+	color: var(--primary);
+}

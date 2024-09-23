@@ -23,6 +23,31 @@
                     {% include 'piano.html' %}
                 </div>
             </div>
+            <!-- Bootstrap Modal -->
+            <div class="d-flex justify-content-center align-self-center">
+                <div class="modal fade" id="gameOverModal" tabindex="-1" aria-labelledby="gameOverModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header d-flex justify-content-between">
+                                <div></div>
+                                <h3 class="modal-title" id="gameOverModalLabel">Game Over</h3>
+                                <div class="d-flex justify-content-end">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="modal-body text-center">
+                                <div class="d-flex justify-content-evenly mt-4">
+                                    <p>Your score: <span id="final-score"></span></p>
+                                    <p>High score: <span id="high-score"></span></p>
+                                </div>
+                                <p class="my-4">Did you know: <br><span id="random-fact"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
