@@ -1,0 +1,122 @@
+{% load static %} {% block content %}
+
+<section id="features" class="py-3 py-md-5 h-100">
+	<h1 class="text-center mb-4 display-6 fw-bold">
+		<span style="color: #d4af37">Our</span> Features
+	</h1>
+
+	<div class="container px-4 mt-0 mb-5" id="custom-cards">
+		<div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+			<div class="col">
+				<div
+					class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+					style="
+						background-image: url('{% static 'images/feature1.jpg' %}');
+						background-size: cover;
+						background-repeat: no-repeat;
+						background-position: center;
+						position: relative; /* Added */
+					"
+				>
+					<!-- Dark overlay -->
+					<div
+						class="position-absolute top-0 left-0 right-0 bottom-0"
+						style="background-color: rgba(0, 0, 0, 0.5); z-index: 1"
+					></div>
+					<div
+						class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1 position-relative"
+						style="z-index: 2"
+					>
+						<h2
+							class="pt-1 mt-1 mb-4 display-6 lh-1 fw-bold"
+							style="
+								color: #ffd700;
+								text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+							"
+						>
+							Interactive Lessons
+						</h2>
+						<p class="bg-dark rounded text-center p-1">
+							Engaging and interactive piano lessons designed for beginners,
+							ensuring you learn at your own pace.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col">
+				<div
+					class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+					style="
+						background-image: url('{% static 'images/feature2.jpg' %}');
+						background-size: cover;
+						background-repeat: no-repeat;
+						background-position: center;
+						position: relative; /* Added */
+					"
+				>
+					<!-- Dark overlay -->
+					<div
+						class="position-absolute top-0 left-0 right-0 bottom-0"
+						style="background-color: rgba(0, 0, 0, 0.5); z-index: 1"
+					></div>
+					<div
+						class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1 position-relative"
+						style="z-index: 2"
+					>
+						<h2
+							class="pt-3 mt-3 mb-4 display-6 lh-1 fw-bold"
+							style="
+								color: #ffd700;
+								text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+							"
+						>
+							Progress Tracking
+						</h2>
+						<p class="bg-dark rounded text-center p-1">
+							Track your learning journey with our intuitive progress monitoring
+							system, celebrating milestones along the way.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col">
+				<div
+					class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+					style="
+						background-image: url('{% static 'images/feature4.jpg' %}');
+						background-size: cover;
+						background-repeat: no-repeat;
+						background-position: center;
+					"
+				>
+					<!-- Dark overlay -->
+					<div
+						class="position-absolute top-0 left-0 right-0 bottom-0"
+						style="background-color: rgba(0, 0, 0, 0.5); z-index: 1"
+					></div>
+					<div
+						class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1 position-relative"
+						style="z-index: 2"
+					>
+						<h2
+							class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"
+							style="
+								color: #ffd700;
+								text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+							"
+						>
+							Community Support
+						</h2>
+						<p class="bg-dark rounded text-center p-1">
+							Join a vibrant community of learners and instructors to share
+							tips, ask questions, and collaborate on your musical journey.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}

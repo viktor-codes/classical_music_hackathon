@@ -1,19 +1,66 @@
-<div class="container-fluid m-0">
-	{% block footertop %}<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 px-5 m-0 my-4 ">{% endblock footertop %}
-		<p class="col-md-4 mb-0 text-light">© 2024 Team Name</p>
-	
-		<div class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto" contenteditable="false" style="cursor: pointer;">
-		  <a href="#home" class="footer-img">🎹</a>
-		</div>
-	
-		<ul class="nav col-md-4 justify-content-end">
-		  <li class="nav-item"><a href="{% url 'home' %}" class="nav-link px-2 text-light" contenteditable="false" style="cursor: pointer;">Home</a></li>
-		  <li class="nav-item"><a href="{% url 'lessons' %}" class="nav-link px-2 text-light" contenteditable="false" style="cursor: pointer;">Lessons</a></li>
-		  <li class="nav-item"><a href="{% url 'challenge' %}" class="nav-link px-2 text-light" contenteditable="false" style="cursor: pointer;">Game</a></li>
-		  <li class="nav-item"><a href="{% url 'team' %}" class="nav-link px-2 text-light" contenteditable="false" style="cursor: pointer;">Team</a></li>
-		  {% if user.is_authenticated %}
-		  <li class="nav-item"><a href="{% url 'highscore' %}" class="nav-link px-2 text-light" contenteditable="false" style="cursor: pointer;">Highscores</a></li>
-		  {% endif %}
-		</ul>
-	  </footer>
-</div>
+{% block footertop %}
+<footer
+	class="d-flex flex-wrap justify-content-between align-items-center py-3 px-5"
+	style="background-color: #d4af37; width: 100%; bottom: 0; left: 0"
+>
+	{% endblock footertop %}
+	<p class="col-md-4 mb-0 text-light">© 2024 Team Name</p>
+
+	<div
+		class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto"
+		contenteditable="false"
+		style="cursor: pointer"
+	>
+		<a href="#home" class="footer-img">🎹</a>
+	</div>
+
+	<ul class="nav col-md-4 justify-content-end">
+		<li class="nav-item">
+			<a
+				href="{% url 'home' %}"
+				class="nav-link px-2 text-light"
+				contenteditable="false"
+				style="cursor: pointer"
+				>Home</a
+			>
+		</li>
+		<li class="nav-item">
+			<a
+				href="{% url 'lessons' %}"
+				class="nav-link px-2 text-light"
+				contenteditable="false"
+				style="cursor: pointer"
+				>Lessons</a
+			>
+		</li>
+		<li class="nav-item">
+			<a
+				href="{% url 'challenge' %}"
+				class="nav-link px-2 text-light"
+				contenteditable="false"
+				style="cursor: pointer"
+				>Game</a
+			>
+		</li>
+		<li class="nav-item">
+			<a
+				href="{% url 'team' %}"
+				class="nav-link px-2 text-light"
+				contenteditable="false"
+				style="cursor: pointer"
+				>Team</a
+			>
+		</li>
+		{% if user.is_authenticated %}
+		<li class="nav-item">
+			<a
+				href="{% url 'highscore' %}"
+				class="nav-link px-2 text-light"
+				contenteditable="false"
+				style="cursor: pointer"
+				>Highscores</a
+			>
+		</li>
+		{% endif %}
+	</ul>
+</footer>
