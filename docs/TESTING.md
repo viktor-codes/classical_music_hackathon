@@ -24,10 +24,16 @@ Usability was tested with the below user acceptance testing.
 | 1           | Click on logo brand | Bring up home page | Y |   Logo brand on navbar   |
 | Lessons Page     |                        |                  |      |             |
 | 1           | Click on lessons link on navbar | Bring up lessons page | Y |  n/a   |
+| 2           | Click on lessons tabs to pick the lesson you want | Bring up the corresponding lesson content | Y |  ![lessons tab screenshot](./readme-images/lessons-tabs-screenshot.png)   |
+| 3           | Play the piano | Play audio and display the corresponding note and stave | Y |  ![note and stave screenshot](./readme-images/note-stave-screenshot.png)   |
+| 4           | Slide volume | Increase or decrese volume level | Y |  ![volume slider screenshot](./readme-images/volume-slider-screenshot.png)   |
+| 5           | Toggle button | Show corresponding keys on the keyboard to play piano | Y |  ![toggle screenshot](./readme-images/toggle-screenshot.png)   |
+| 6           | Click on left side menu | Learn button redirects to the top of the page, play button redirects to the piano section of the page, and game button redirects to the game page | Y |  ![left side menu screenshot](./readme-images/left-side-menu-screenshot.png)   |
 | Game Page     |                        |                  |      |             |
 | 1           | Click on game link on navbar | Bring up game page | Y |  n/a   |
-| 2           | Click on start button | Start challenge and timer | Y |  n/a   |
-| 3           | Click on restart button | Restart challenge | Y |  n/a   |
+| 2           | Click on start button | Start challenge and timer | Y |  ![play button screenshot](./readme-images/play-button-screenshot.png)   |
+| 3           | Click on restart button | Restart challenge | Y |  ![restart button screenshot](./readme-images/restart-button-screenshot.png)   |
+| 4           | Select answer | Plus or minus score accordingly | Y |  n/a   |
 | Team Page     |                        |                  |      |             |
 | 1           | Click on team link on navbar | Bring up team page | Y |  n/a   |
 | 2           | Click on faces | Redirect to GitHub/LinkedIn profiles | Y |  n/a   |
