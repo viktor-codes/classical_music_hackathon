@@ -43,7 +43,7 @@
 				</div>
 			</div>
 			<div class="col-8 mt-5">
-				<div class="lesson-selector mb-5">
+				<div class="lesson-selector mb-5 text-center">
 					<button class="lesson-tab active fw-bold" data-lesson="1">
 						Lesson 1
 					</button>
@@ -171,15 +171,17 @@
 				</div>
 
 				<div class="lesson-content d-none" id="lesson-3">
-					<h1>Lesson 3: Chords</h1>
+          <div class="container mt-5">
+					<h1 class="text-center mb-4">Lesson 3: Chords</h1>
 					<img
 						src="{% static 'images/chords.webp' %}"
-						class="mt-5"
+						class="mt-5 rounded shadow"
 						alt="piano chords"
 						width="800"
 						height="300"
 					/>
 				</div>
+      </div>
 				{% include 'piano.html' %}
 			</div>
 		</div>
