@@ -73,7 +73,7 @@ INTERNAL_IPS = [
 
 # NPM_BIN_PATH = "/usr/local/bin/npm"
 
-CSRF_TRUSTED_ORIGINS = ["http://localhost:8000", "https://8000-marcgithub2-classicalmu-4loh6f30in6.ws.codeinstitute-ide.net"]
+CSRF_TRUSTED_ORIGINS = ["http://localhost:8000",]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
