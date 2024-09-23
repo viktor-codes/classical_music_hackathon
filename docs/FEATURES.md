@@ -40,9 +40,11 @@ The home page displays the hero section with the description of the website's pu
 ## Lessons page
 ![lessons page screenshot](./readme-images/lessons-page.png)
 
-The lessons page contains three lessons under toggle tabs. Lesson 1 is about the musical alphabet, lesson 2 on basic scales, and lesson 3 on chords. It also contains a playable piano that you can click using your mouse or press the corresponding key.
+The lessons page contains three lessons under toggle tabs. Lesson 1 is about the musical alphabet, lesson 2 on basic scales, and lesson 3 on chords. It also contains a playable piano that you can click using your mouse or press the corresponding key. The corresponding note and stave are also displayed.
 
 ![piano screenshot](./readme-images/piano-screenshot.png)
+
+The piano has a volume slider to increase or decrease volume level. It also has a toggle button to display the corresponding key on the keyboard to play the piano.
 
 ## Game page
 ![game page screenshot](./readme-images/game-screenshot.png)

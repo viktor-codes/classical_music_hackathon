@@ -68,7 +68,7 @@ The objective of this project was to design a learning application that is easy 
 
 The colour palette for this learning application was chosen as it represented classical music, it has a richness and classical aesthetic associated with it.   
 
-<img src="readme-images/coolors-rhythm-ready.png">
+![colour palette](./readme-images/colour-palette.png)
 
 # Technologies used
 * <b>JavaScript</b> - Custom JavaScript was used in the development of this application.
