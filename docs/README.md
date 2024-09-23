@@ -28,16 +28,16 @@ This learning application is intended for:
 
 ## Wireframes 
 ### Home
-<img src="static/images/readme-images/home-page.png">
+<img src="docs/readme-images/home-page.png">
 
 ### Lessons 
-<img src="static/images/readme-images/lessons.png">
+<img src="docs/readme-images/lessons.png">
 
 ### Challenge
-<img src="static/images/readme-images/challenge.png">
+<img src="docs/readme-images/challenge.png">
 
 ### Team
-<img src="static/images/readme-images/team.png">
+<img src="docs/readme-images/team.png">
 
 ## Design
 
@@ -47,7 +47,7 @@ The objective of this project was to design a learning application that is easy 
 
 The colour palette for this learning application was chosen as it represented classical music, it has a richness and classical aesthetic associated with it.   
 
-<img src="static/images/readme-images/coolors-rhythm-ready.png">
+<img src="docs/readme-images/coolors-rhythm-ready.png">
 
 # Technologies used
 * <b>JavaScript</b> - Custom JavaScript was used in the development of this application.
@@ -160,6 +160,9 @@ This page shows the form for signing up. An error message pops up if the input i
 * The ability to show the user piano notes for a song and have the user follow along on the digital piano would be advantageous. 
 * More challenges could be added to allow the user to test new skills.
 
+# Testing
+A detailed overview of the testing process is available [here.](https://github.com/viktor-codes/classical_music_hackathon/blob/main/docs/TESTING.md)
+
 # Deployment 
 
 Setting up a basic Django project and deploying to Heroku.
@@ -201,3 +204,14 @@ import env
 17. Automatic deploy will build the app each time it is pushed to GitHub. To enable this choose the branch you would like to deploy and click ```Enable Automatic Deploys```. 
 18. To manually deploy the app click ```Deploy Branch```.
 19. To view the deployed app click ```Open app``` at the top of the page.
+
+# Acknowledgements
+
+Great thanks to all team members who contributed on this project.
+
+* [Viktor Rura](https://github.com/viktor-codes)
+* [Mia Rasmussen](https://github.com/MiaRasmussen05)
+* [Joseph Keane](https://github.com/itjosephk2)
+* [Leonie McLaughlin](https://github.com/leoniemclaughlin7)
+* [Ilyas Hussein](https://github.com/Ilyas355)
+* [Marc](https://github.com/marcgithub23)
